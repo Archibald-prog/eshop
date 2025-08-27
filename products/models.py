@@ -1,5 +1,7 @@
 from django.db import models
 
+from modules.services.utils import gen_slug
+
 
 class Category(models.Model):
     name = models.CharField(
@@ -26,6 +28,11 @@ class Category(models.Model):
     def __str__(self):
         return f"{self.name}"
 
+    def save(self, *args, **kwargs):
+        if not self.slug:
+            self.slug = gen_slug(self, self.name)
+        super().save(*args, **kwargs)
+
     class Meta:
         verbose_name = "Категория"
         verbose_name_plural = "Категории"
@@ -47,6 +54,11 @@ class ProductType(models.Model):
 
     def __str__(self):
         return f"{self.name}"
+
+    def save(self, *args, **kwargs):
+        if not self.slug:
+            self.slug = gen_slug(self, self.name)
+        super().save(*args, **kwargs)
 
     class Meta:
         verbose_name = "Тип"
@@ -74,6 +86,11 @@ class Material(models.Model):
     def __str__(self):
         return f"{self.name}"
 
+    def save(self, *args, **kwargs):
+        if not self.slug:
+            self.slug = gen_slug(self, self.name)
+        super().save(*args, **kwargs)
+
     class Meta:
         verbose_name = "Материал"
         verbose_name_plural = "Материалы"
@@ -100,6 +117,13 @@ class Product(models.Model):
     )
     material = models.ForeignKey(
         Material, on_delete=models.CASCADE
+    )
+    old_price = models.DecimalField(
+        verbose_name="Старая цена",
+        max_digits=8,
+        decimal_places=2,
+        null=True,
+        blank=True
     )
     price = models.DecimalField(
         verbose_name="Цена",
@@ -134,6 +158,11 @@ class Product(models.Model):
 
     def __str__(self):
         return f"{self.name} ({self.category.name})"
+
+    def save(self, *args, **kwargs):
+        if not self.slug:
+            self.slug = gen_slug(self, self.name)
+        super().save(*args, **kwargs)
 
     class Meta:
         verbose_name = "Товар"
