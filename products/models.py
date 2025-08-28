@@ -189,3 +189,34 @@ class ProductImages(models.Model):
     class Meta:
         verbose_name = "Изображение товара"
         verbose_name_plural = "Изображения товара"
+
+
+class ProductFeatures(models.Model):
+    name = models.CharField(
+        verbose_name="Название",
+        max_length=100,
+        blank=True
+    )
+    product = models.ForeignKey(
+        Product, verbose_name="Товар",
+        on_delete=models.CASCADE
+    )
+    detailed_desc = models.TextField(
+        verbose_name='Описание',
+        blank=True
+    )
+    color = models.TextField(
+        verbose_name='Цвет',
+        blank=True
+    )
+    dimensions = models.TextField(
+        verbose_name='Размеры',
+        blank=True
+    )
+
+    def __str__(self):
+        return f"{self.name}"
+
+    class Meta:
+        verbose_name = "Характеристика товара"
+        verbose_name_plural = "Характеристики товара"
