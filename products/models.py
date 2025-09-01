@@ -1,5 +1,5 @@
 from django.db import models
-
+from django.urls import reverse
 from modules.services.utils import gen_slug
 
 
@@ -164,12 +164,22 @@ class Product(models.Model):
             self.slug = gen_slug(self, self.name)
         super().save(*args, **kwargs)
 
+    def get_absolute_url(self):
+        return reverse("product_detail", kwargs={"slug": self.slug})
+
     class Meta:
         verbose_name = "Товар"
         verbose_name_plural = "Товары"
 
 
 class ProductImages(models.Model):
+    CARD = 'c'
+    SLIDER = 's'
+    TYPES = (
+    (CARD, 'карточка'),
+    (SLIDER, 'слайдер')
+    )
+
     name = models.CharField(
         verbose_name="Название",
         max_length=100
@@ -178,6 +188,9 @@ class ProductImages(models.Model):
         verbose_name="Изображение",
         upload_to="product_images/"
     )
+    image_type = models.CharField(
+        verbose_name='Тип', max_length=1,
+        choices=TYPES, blank=True, default=SLIDER)
     product = models.ForeignKey(
         Product, verbose_name="Товар",
         on_delete=models.CASCADE
