@@ -1,0 +1,86 @@
+{% extends 'products/base_products.html' %}
+{% block title %}{% endblock %}
+
+{% block content %}
+    {% block main %}
+        {% include 'products/includes/index_slider.html' %}
+        {% include 'products/includes/advantages.html' %}
+
+        <section class="featured-products">
+            <div class="container-fluid">
+                <div class="row mb-5">
+                    <div class="col-12">
+                        <h2 class="section-title">
+                            <span>Рекомендуемые товары</span>
+                        </h2>
+                    </div>
+                </div>
+
+                <div class="row">
+                    {% for product in product_list %}
+                    <div class="col-lg-3 col-md-4 col-sm-6 mb-3">
+                        {% include 'products/includes/product_card.html' %}
+                    </div>
+                    {% endfor %}
+                </div>
+
+            </div>
+        </section>
+
+
+
+        <section class="new-products">
+            <div class="container-fluid">
+                <div class="row mb-5">
+                    <div class="col-12">
+                        <h2 class="section-title">
+                            <span>Новинки</span>
+                        </h2>
+                    </div>
+                </div>
+
+                <div class="owl-carousel owl-theme owl-carousel-full">
+                    {% for product in new_products %}
+                    {% include 'products/includes/product_card.html' %}
+                    {% endfor %}
+                </div>
+
+            </div>
+        </section>
+
+
+        <section class="about-us">
+            <div class="container fluid">
+                <div class="row mb-5">
+                    <div class="col-12">
+                        <h2 class="section-title">
+                            <span>О нас</span>
+                        </h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit velit illo, ex magni
+                        odio rem ab a saepe nihil assumenda illum reiciendis quae nemo fuga porro omnis.
+                        Nesciunt, nostrum at?</p>
+                        <p>Laboriosam, esse dolore incidunt voluptas ea enim quasi laudantium quod ipsum asperiores,
+                        labore, similique cum accusamus optio perspiciatis et cumque pariatur est sapiente
+                        dolorem repudiandae libero nulla nesciunt rem! Magnam!</p>
+                        <p>Voluptatem, maiores dicta? Quod enim temporibus sapiente quisquam optio sed fuga, facilis
+                        iusto animi qui, vitae voluptate inventore eveniet nulla eius soluta et magnam eligendi
+                        a veniam tenetur laborum saepe.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="map">
+            <div class="container-fluid">
+                <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.1485359040164!2d30.3457588126396!3d59.946269874814355!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x469631744fd97e91%3A0x1375957d8f9b61b3!2z0JvQuNGC0LXQudC90YvQuSDQv9GALiwgNS8xOSwg0KHQsNC90LrRgi3Qn9C10YLQtdGA0LHRg9GA0LMsIDE5MTE4Nw!5e0!3m2!1sru!2sru!4v1753441800257!5m2!1sru!2sru"
+                width="100%" height="450" style="border:0; display: block" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </section>
+    {% endblock main %}
+{% endblock content %}
