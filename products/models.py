@@ -33,6 +33,9 @@ class Category(models.Model):
             self.slug = gen_slug(self, self.name)
         super().save(*args, **kwargs)
 
+    def get_absolute_url(self):
+        return reverse("category_list", kwargs={"slug": self.slug})
+
     class Meta:
         verbose_name = "Категория"
         verbose_name_plural = "Категории"
@@ -176,8 +179,8 @@ class ProductImages(models.Model):
     CARD = 'c'
     SLIDER = 's'
     TYPES = (
-    (CARD, 'карточка'),
-    (SLIDER, 'слайдер')
+        (CARD, 'карточка'),
+        (SLIDER, 'слайдер')
     )
 
     name = models.CharField(

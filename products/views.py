@@ -1,6 +1,6 @@
 import random
 from django.views.generic import ListView, DetailView
-from products.models import Product
+from products.models import Product, Category
 
 
 def get_random_id(recommended=True):
@@ -12,8 +12,12 @@ def get_random_id(recommended=True):
     random_id = [obj.id for obj in random_list]
     return random_id
 
+class GetAdditionalData:
+    def get_link_menu(self):
+        return Category.objects.all()
 
-class ProductListView(ListView):
+
+class ProductListView(ListView, GetAdditionalData):
     model = Product
 
     def get_queryset(self):
@@ -29,7 +33,7 @@ class ProductListView(ListView):
         return context
 
 
-class ProductDetailView(DetailView):
+class ProductDetailView(DetailView, GetAdditionalData):
     model = Product
 
     def get_context_data(self, **kwargs):
@@ -40,4 +44,21 @@ class ProductDetailView(DetailView):
         same_products = Product.objects.filter(category=obj.category).exclude(pk=obj.pk)
         context["same_products"] = same_products
         context["features"] = features
+        return context
+
+
+class CategoryListView(ListView, GetAdditionalData):
+    model = Product
+    template_name = 'products/category_list.html'
+
+    def get_queryset(self):
+        cat_slug = self.kwargs['slug']
+        queryset = Product.objects.filter(category__slug=cat_slug)
+        return queryset
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        category = context["object_list"][0].category
+        context["title"] = "Категория -" + str(category)
+        context["category"] = category
         return context

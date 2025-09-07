@@ -1,0 +1,85 @@
+{% extends 'products/base_products.html' %}
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+{% block main %}
+{% include 'products/includes/breadcrumbs.html' %}
+
+<div class="container-fluid">
+    <div class="row">
+        {% include 'products/includes/cat_sidebar.html' %}
+
+        <div class="col-lg-9 col-md-8">
+            <div class="row mb-3">
+                <div class="col-12">
+                    <h1 class="section-title h3">
+                        <span>{{ category.name }}</span>
+                    </h1>
+                </div>
+                <div class="col-4 col-sm-2">
+                    <img src="{{ category.category_image.url }}"
+                         alt="" class="img-thumbnail">
+                </div>
+                <div class="col-8 col-sm-10">
+                    <p>{{ category.description }}</p>
+                </div>
+            </div> <!-- Category name & desc. -->
+
+            <hr>
+
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="input-group mb-3">
+                        <span class="input-group-text">Sort By:</span>
+                        <select class="form-select" aria-label="Sort by:">
+                            <option selected>Default</option>
+                            <option value="1">Name (a-z)</option>
+                            <option value="2">Name (z-a)</option>
+                            <option value="3">Price (low &gt; high)</option>
+                            <option value="4">Price (high &gt; low)</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="input-group mb-3">
+                        <span class="input-group-text">Show:</span>
+                        <select class="form-select" aria-label="Show:">
+                            <option selected>9</option>
+                            <option value="15">15</option>
+                            <option value="30">30</option>
+                            <option value="45">45</option>
+                        </select>
+                    </div>
+                </div>
+            </div> <!-- Selection forms -->
+
+            <div class="row">
+                {% for product in object_list %}
+                <div class="col-lg-4 col-sm-6 mb-3">
+                    {% include 'products/includes/product_card.html' %}
+                </div>
+                {% endfor %}
+            </div> <!-- Product cards -->
+
+            <div class="row">
+                <div class="col-12">
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination">
+                            <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                            <li class="page-item"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item active" aria-current="page"><a class="page-link"
+                                                                                href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item"><a class="page-link" href="#">4</a></li>
+                            <li class="page-item"><a class="page-link" href="#">5</a></li>
+                            <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div> <!-- Pagination panel -->
+        </div>
+    </div>
+</div>
+
+{% endblock main %}
+{% endblock content %}

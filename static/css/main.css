@@ -54,6 +54,10 @@ img {
     color: var(--contrast-color);
 }
 
+.btn-secondary {
+    background-color: var(--contrast-color);
+}
+
 .btn-outline-warning {
     border-color: var(--accent-color); 
 }
