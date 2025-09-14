@@ -1,20 +1,8 @@
-import random
+from django.shortcuts import get_object_or_404
 from django.views.generic import ListView, DetailView
+from django.db.models import Q
 from products.models import Product, Category
-
-
-def get_random_id(recommended=True):
-    if recommended:
-        initial_qs = Product.objects.filter(is_recommended=True)
-    else:
-        initial_qs = Product.objects.filter(is_new=True)
-    random_list = random.sample(list(initial_qs), 8)
-    random_id = [obj.id for obj in random_list]
-    return random_id
-
-class GetAdditionalData:
-    def get_link_menu(self):
-        return Category.objects.all()
+from modules.services.utils import get_random_id, GetAdditionalData
 
 
 class ProductListView(ListView, GetAdditionalData):
@@ -52,13 +40,35 @@ class CategoryListView(ListView, GetAdditionalData):
     template_name = 'products/category_list.html'
 
     def get_queryset(self):
-        cat_slug = self.kwargs['slug']
-        queryset = Product.objects.filter(category__slug=cat_slug)
+        cat_slug = self.kwargs["slug"]
+        q_objects = Q()
+        type_lst = self.request.GET.getlist("type")
+        if type_lst:
+            q_objects.add(Q(type__in=type_lst), Q.AND)
+        material_lst = self.request.GET.getlist("material")
+        if material_lst:
+            q_objects.add(Q(material__in=material_lst), Q.AND)
+        available_lst = self.request.GET.getlist("is_available")
+        if available_lst:
+            q_objects.add(Q(is_available__in=self.get_boolean(available_lst)), Q.AND)
+        if q_objects:
+            queryset = super().get_queryset().filter(q_objects,
+                                                     category__slug=cat_slug)
+        else:
+            queryset = super().get_queryset().filter(category__slug=cat_slug)
         return queryset
+
+    def get_ordering(self):
+        ordering = self.request.GET.get("orderby")
+        return ordering
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        category = context["object_list"][0].category
+        category = get_object_or_404(Category, slug=self.kwargs["slug"])
         context["title"] = "Категория -" + str(category)
         context["category"] = category
+        context["category_types"] = self.get_types(category)
+        context["category_materials"] = self.get_materials(category)
+        context["available_num"] = self.get_available(category)
+        context["not_available_num"] = self.get_not_available(category)
         return context

@@ -28,28 +28,24 @@
             <hr>
 
             <div class="row">
-                <div class="col-sm-6">
-                    <div class="input-group mb-3">
-                        <span class="input-group-text">Sort By:</span>
-                        <select class="form-select" aria-label="Sort by:">
-                            <option selected>Default</option>
-                            <option value="1">Name (a-z)</option>
-                            <option value="2">Name (z-a)</option>
-                            <option value="3">Price (low &gt; high)</option>
-                            <option value="4">Price (high &gt; low)</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="col-sm-6">
-                    <div class="input-group mb-3">
-                        <span class="input-group-text">Show:</span>
-                        <select class="form-select" aria-label="Show:">
-                            <option selected>9</option>
-                            <option value="15">15</option>
-                            <option value="30">30</option>
-                            <option value="45">45</option>
-                        </select>
-                    </div>
+                <div class="col-sm-12">
+                    <form action="{% url 'category_list' category.slug %}" method="get">
+                        <div class="input-group mb-3">
+                            <span class="input-group-text">Сортировать:</span>
+                            <select class="form-select" name="orderby">
+                                <option value="id">По умолчанию</option>
+                                <option value="name">По названию (a-я)</option>
+                                <option value="-name">По названияю (я-а)</option>
+                                <option value="price">По цене(по возрастанию)</option>
+                                <option value="-price">По цене (по убыванию)</option>
+                            </select>
+                        </div>
+                        <div class="d-grid mb-3">
+                            <button type="submit" class="btn btn-secondary btn-lg">
+                                Показать
+                            </button>
+                        </div>
+                    </form>
                 </div>
             </div> <!-- Selection forms -->
 
