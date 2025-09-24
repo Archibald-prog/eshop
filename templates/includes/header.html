@@ -38,12 +38,33 @@
                                     Account
                                 </button>
                                 <ul class="dropdown-menu">
+                                {% if request.user.is_authenticated %}
                                     <li>
-                                        <a class="dropdown-item" href="#">Sign In</a>
+                                        <form action="{% url 'auth:logout' %}" method="post">
+                                          {% csrf_token %}
+                                            &emsp;{{ user.username }}
+                                            <button class="dropdown-item">
+                                                Выйти
+                                            </button>
+                                        </form>
                                     </li>
                                     <li>
-                                        <a class="dropdown-item" href="#">Sign Up</a>
+                                        <a class="dropdown-item" href="{% url 'auth:edit' %}">
+                                            Редактировать профиль
+                                        </a>
                                     </li>
+                                {% else %}
+                                    <li>
+                                        <a class="dropdown-item" href="{% url 'auth:login' %}">
+                                            Войти
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="{% url 'auth:register' %}">
+                                            Зарегистрироваться
+                                        </a>
+                                    </li>
+                                {% endif %}
                                 </ul>
                             </div>
                         </div>

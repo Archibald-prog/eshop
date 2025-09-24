@@ -1,0 +1,28 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <nav class="breadcrumbs">
+                <ul>
+                    <li><a href="{% url 'main' %}">Главная</a></li>
+                    {% if product %}
+                    <li>
+                        <a href="{{ product.category.get_absolute_url }}">
+                        {{ product.category.name }}
+                        </a>
+                    </li>
+                    <li><span>{{ product.name }}</span></li>
+                    {% elif category %}
+                        <li><span>{{ category.name }}</span></li>
+                    {% elif register %}
+                        <li><span>Регистрация</span></li>
+                    {% elif edit %}
+                        <li><span>Редиктирование профиля</span></li>
+                    {% else %}
+                        <li><span>Авторизация</span></li>
+                    {% endif %}
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
