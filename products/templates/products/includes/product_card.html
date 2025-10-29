@@ -27,7 +27,10 @@
                 {{ product.price }}&#8381;
             </div>
             <div class="product-links">
-                <a href="#" class="btn btn-outline-secondary add-to-cart">
+                <a href="{% url 'basket:add' %}"
+                   class="btn btn-outline-secondary add-to-cart"
+                   data-product-id="{{ product.id }}">
+                    {% csrf_token %}
                     <i class="fas fa-shopping-cart"></i>
                 </a>
             </div>

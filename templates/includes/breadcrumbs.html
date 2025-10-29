@@ -17,8 +17,10 @@
                         <li><span>Регистрация</span></li>
                     {% elif edit %}
                         <li><span>Редиктирование профиля</span></li>
-                    {% else %}
+                    {% elif login %}
                         <li><span>Авторизация</span></li>
+                    {% else %}
+                        <li><span>Ваша корзина, {{ request.user.first_name }}</span></li>
                     {% endif %}
                 </ul>
             </nav>

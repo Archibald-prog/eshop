@@ -18,6 +18,8 @@ class ProductListView(ListView, GetAdditionalData):
         id_list = get_random_id(recommended=False)
         new_products = Product.objects.filter(pk__in=id_list)
         context["new_products"] = new_products
+        # basket = self.get_basket(request)
+        # context["basket"] = basket
         return context
 
 
@@ -32,6 +34,8 @@ class ProductDetailView(DetailView, GetAdditionalData):
         same_products = Product.objects.filter(category=obj.category).exclude(pk=obj.pk)
         context["same_products"] = same_products
         context["features"] = features
+        # basket = self.get_basket(self.request.user)
+        # context["basket"] = basket
         return context
 
 
@@ -71,4 +75,6 @@ class CategoryListView(ListView, GetAdditionalData):
         context["category_materials"] = self.get_materials(category)
         context["available_num"] = self.get_available(category)
         context["not_available_num"] = self.get_not_available(category)
+        # basket = self.get_basket(self.request.user)
+        # context["basket"] = basket
         return context

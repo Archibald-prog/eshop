@@ -14,4 +14,6 @@ urlpatterns = [
          name='register'),
     path('edit/', authapp.EditShopUser.as_view(),
          name='edit'),
+    path('user-basket/', authapp.UserBasketView.as_view(),
+         name='user_basket'),
 ]

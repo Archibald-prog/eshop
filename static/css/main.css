@@ -54,10 +54,6 @@ img {
     color: var(--contrast-color);
 }
 
-.btn-secondary {
-    background-color: var(--contrast-color);
-}
-
 .btn-outline-warning {
     border-color: var(--accent-color); 
 }
@@ -69,6 +65,10 @@ img {
 .btn-outline-warning:hover {
     background-color: var(--accent-color);
     color: var(--contrast-color); 
+}
+
+.table-dark {
+    --bs-table-bg: var(--contrast-color); 
 }
 
 /* ======================== General rules =========================== */
@@ -390,7 +390,8 @@ ul.social-icons a:hover {
 .about-us .section-title span,
 .sidebar .section-title span,
 .product-content .section-title span,
-.page-register .section-title span {
+.page-register .section-title span,
+.cart-summary .section-title span {
     background-color: #fff; 
 }
 
@@ -535,6 +536,15 @@ footer a:hover {
 .sidebar .collapse-filters-btn {
     color: var(--contrast-color);
 }
+
+.sb-button {
+    color: var(--bg-color); 
+    background-color: var(--text-color);
+}
+
+.btn-secondary {
+    --bs-btn-bg: var(--contrast-color);
+}
 /* ========================== Category page ============================ */
 
 /* ========================== Product page ============================ */
@@ -575,6 +585,48 @@ footer a:hover {
 
 
 /* ========================== Product page ============================ */
+
+/* ============================= Cart Page ============================ */
+.cart-content table img {
+    max-width: 50px;
+}
+
+.cart-content table th {
+    text-align: center;
+}
+
+.cart-content table td {
+    padding: 1rem;
+    text-align: center;
+}
+
+.cart-content-title {
+    text-decoration: none;
+    display: block;
+}
+
+.cart-qty {
+    width: 70px;
+}
+
+.btn-coupon {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.btn-coupon:hover {
+    color: var(--contrast-color);
+}
+
+.cart-summary h3 {
+    color: #000;
+}
+
+.cart-summary .btn {
+    padding: 1rem;
+}
+
+/* ============================= Cart Page ============================ */
 
 
 @media only screen and (min-width : 992px) {

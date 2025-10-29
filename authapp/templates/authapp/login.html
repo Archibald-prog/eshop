@@ -15,7 +15,7 @@
                         <form action="{% url 'auth:login' %}" method="post"
                               class="needs-validation" novalidate>
                             {% csrf_token %}
-
+<!--                            <input type="hidden" name="next" value="{{ next }}">-->
                             <div class="form-error">{{ form.non_field_errors }}</div>
 
                             {% for field in form %}

@@ -1,0 +1,15 @@
+{% extends 'basketapp/base_basketapp.html' %}
+{% block title %}{{ title }}{% endblock %}
+{% load basket_tags %}
+
+{% block content %}
+{% user_baskets request as carts %}
+{% include 'includes/breadcrumbs.html' %}
+{% block main %}
+<div class="container-fluid">
+    <div class="basket_items">
+        {% include 'basketapp/includes/inc_basket_list.html' %}
+    </div>
+</div>
+{% endblock main %}
+{% endblock content %}

@@ -82,3 +82,17 @@ class GetAdditionalData:
             elif raw_value.lower() == 'true':
                 raw_value = True
         return [raw_value]
+
+    @staticmethod
+    def get_user_basket(request):
+        """
+        Returns a collection of items
+        in the current user's basket.
+        """
+        from basketapp import models
+        if request.user.is_authenticated:
+            return models.Basket.objects.filter(user=request.user)
+
+        if not request.session.session_key:
+            request.session.create()
+        return models.Basket.objects.filter(session_key=request.session.session_key)
