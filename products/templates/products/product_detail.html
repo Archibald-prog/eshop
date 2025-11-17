@@ -39,6 +39,16 @@
                     {{ product.price }}&#8381;
                 </div>
                 <p>{{ product.description }}</p>
+
+                {% if product.quantity > 0 %}
+                    <span class="badge text-bg-dark product-stock mb-3">
+                        Осталось: {{product.quantity}} шт.
+                    </span>
+                {% else %}
+                    <span class="badge text-bg-dark product-not-available mb-3">
+                        Только под заказ
+                    </span>
+                {% endif %}
                 <div class="product-add2cart">
                     <div class="input-group">
                         <a href="{% url 'basket:add' %}" class="btn btn-warning add-to-cart"

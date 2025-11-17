@@ -86,6 +86,12 @@ section {
     padding: 50px 0; 
 }
 
+.profile-title {
+    text-transform: uppercase;
+    color: var(--contrast-color);
+    font-weight: 700;
+}
+
 .section-title {
     position: relative;
     text-transform: uppercase;
@@ -391,7 +397,9 @@ ul.social-icons a:hover {
 .sidebar .section-title span,
 .product-content .section-title span,
 .page-register .section-title span,
-.cart-summary .section-title span {
+.cart-summary .section-title span,
+.order-detail .section-title span,
+.cart-content .section-title span {
     background-color: #fff; 
 }
 
@@ -582,8 +590,6 @@ footer a:hover {
     padding-top: 20px;
 }
 
-
-
 /* ========================== Product page ============================ */
 
 /* ============================= Cart Page ============================ */
@@ -626,7 +632,27 @@ footer a:hover {
     padding: 1rem;
 }
 
+.product-stock {
+    font-style: italic;
+    background-color: var(--contrast-color) !important;
+}
+
+.product-not-available {
+    font-style: italic;
+    background-color: var(--red-color) !important;
+}
 /* ============================= Cart Page ============================ */
+
+/* ======================== Profile Page =========================== */
+
+.accordion-button:not(.collapsed) {
+    color: black;
+    background-color: var(--gray-color);
+    box-shadow: inset 0 calc(-1 * var(--bs-accordion-border-width)) 0 var(--contrast-color);
+
+}
+
+/* ======================== Profile Page =========================== */
 
 
 @media only screen and (min-width : 992px) {

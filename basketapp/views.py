@@ -1,6 +1,5 @@
 from django.shortcuts import get_object_or_404
 from django.http import JsonResponse
-# from django.contrib.auth.mixins import LoginRequiredMixin
 from django.views.generic.base import View
 from basketapp.models import Basket
 from products.models import Product
@@ -25,6 +24,7 @@ class BasketAdd(CartMixin, View):
                 product=product, quantity=1)
 
         response_data = {
+            "message": "Товар добавлен в корзину",
             'cart_items_html': self.render_basket(request)
         }
         return JsonResponse(response_data)
@@ -38,6 +38,7 @@ class BasketRemove(CartMixin, View):
         basket_record.delete()
 
         response_data = {
+            "message": "Товар удален из корзины",
             "quantity_deleted": quantity,
             "cart_items_html": self.render_basket(request)
         }

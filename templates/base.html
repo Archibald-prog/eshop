@@ -23,10 +23,11 @@
   <div class="wrapper">
 
     {% include 'includes/header.html' %}
-
+    {% include "includes/notifications.html" %}
     {% block content %}
       <main class="main">
           {% block main %}
+
           {% endblock main %}
       </main>
     {% endblock %}

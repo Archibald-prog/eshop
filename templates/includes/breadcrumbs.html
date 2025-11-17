@@ -19,8 +19,21 @@
                         <li><span>Редиктирование профиля</span></li>
                     {% elif login %}
                         <li><span>Авторизация</span></li>
-                    {% else %}
+                    {% elif user_basket %}
                         <li><span>Ваша корзина, {{ request.user.first_name }}</span></li>
+                    {% elif user_profile %}
+                        <li>
+                            <span>
+                            Личный кабинет пользователя {{ request.user.first_name }}
+                            </span>
+                        </li>
+                    {% else %}
+                        <li>
+                            <a href="{% url 'auth:user_basket' %}">
+                                Вернуться в корзину
+                            </a>
+                        </li>
+                        <li><span>Оформление заказа</span></li>
                     {% endif %}
                 </ul>
             </nav>

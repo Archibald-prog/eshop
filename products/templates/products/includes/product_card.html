@@ -21,6 +21,15 @@
             <a href="{{ product.get_absolute_url }}">{{ product.name }}</a>
         </h4>
         <p class="product-excerpt">{{ product.description }}</p>
+        {% if product.quantity > 0 %}
+        <span class="badge text-bg-dark product-stock mb-3">
+            Осталось: {{product.quantity}} шт.
+        </span>
+        {% else %}
+        <span class="badge text-bg-dark product-not-available mb-3">
+            Только под заказ
+        </span>
+        {% endif %}
         <div class="product-bottom-details d-flex justify-content-between">
             <div class="product-price">
                 <small>{{ product.old_price }}&#8381;</small>

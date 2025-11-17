@@ -1,0 +1,102 @@
+{% extends 'basketapp/base_basketapp.html' %}
+{% load static %}
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+{% include 'includes/breadcrumbs.html' %}
+{% block main %}
+<div class="container-fluid">
+    <div class="col-lg-12 mb-3">
+        <div class="cart-content p-3 h-100 bg-white">
+            <h5 class="section-title mb-3"><span>Мой профиль</span></h5>
+            <div class="row">
+                <div class="col-lg-3 col-md-4 col-sm-6 mb-3">
+                    {% if request.user.avatar %}
+                    <img src="{{ request.user.avatar.url }}"
+                         alt="Аватар пользователя" class="img-fluid rounded-circle"
+                         style="max-width: 150px;">
+                    {% else %}
+                    <img src="{% static 'img/baseavatar.jpg' %}"
+                         alt="Аватар пользователя" class="img-fluid rounded-circle"
+                         style="max-width: 150px;">
+                    {% endif %}
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 mb-3">
+                    <h5 class="profile-title"><span>Имя:</span></h5>
+                    <p>{{ request.user.first_name }}</p>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 mb-3">
+                    <h5 class="profile-title"><span>Фамилия:</span></h5>
+                    <p>{{ request.user.last_name }}</p>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 mb-3">
+                    <h5 class="profile-title"><span>Email:</span></h5>
+                    <p>{{ request.user.email }}</p>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 mb-3">
+                    <a href="{% url 'auth:edit' %}" class="btn btn-lg btn-warning">
+                        Редактировать профиль
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-12 mb-3">
+        <div class="cart-content p-3 h-100 bg-white">
+            <h5 class="section-title mb-3"><span>Мои заказы</span></h5>
+            <div class="table-responsive">
+                <div class="accordion accordion-flush" id="accordionExample">
+                    {% for order in orders %}
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading{{ order.id }}">
+                            <button class="accordion-button {% if order != orders.0 %}collapsed{% endif %}"
+                                    type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapse{{ order.id }}"
+                                    aria-expanded="false" aria-controls="collapse{{ order.id }}">
+                                Заказ № {{ order.id }} - {{ order.created_timestamp }} |
+                                Статус: <strong class="mx-2">{{order.status}}</strong>
+                            </button>
+                        </h2>
+                        <div id="collapse{{ order.id }}"
+                             class="accordion-collapse collapse {% if order == orders.0 %}show{% endif %}"
+                             aria-labelledby="heading{{ order.id }}" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <table class="table table-dark table-hover">
+                                    <thead>
+                                    <tr>
+                                        <th>Товар</th>
+                                        <th>Количество</th>
+                                        <th>Цена</th>
+                                        <th>Общая стоимость</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    {% for item in order.orderitem_set.all %}
+                                    <tr>
+                                        <td><a class="text-white"
+                                               href="{{ item.product.get_absolute_url }}">
+                                            {{ item.product.name }}</a></td>
+                                        <td>{{ item.quantity }}</td>
+                                        <td>{{ item.price }}</td>
+                                        <td>{{ item.item_cost }}</td>
+                                    </tr>
+                                    {% endfor %}
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>{{ order.orderitem_set.all.total_price }}</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock main %}
+{% endblock content %}

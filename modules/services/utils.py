@@ -91,8 +91,8 @@ class GetAdditionalData:
         """
         from basketapp import models
         if request.user.is_authenticated:
-            return models.Basket.objects.filter(user=request.user)
+            return models.Basket.objects.filter(user=request.user).select_related('product')
 
         if not request.session.session_key:
             request.session.create()
-        return models.Basket.objects.filter(session_key=request.session.session_key)
+        return models.Basket.objects.filter(session_key=request.session.session_key).select_related('product')
