@@ -9,8 +9,17 @@ class ProductListView(ListView, GetAdditionalData):
     model = Product
 
     def get_queryset(self):
-        id_list = get_random_id()
-        return Product.objects.filter(pk__in=id_list)
+        search_query = self.request.GET.get('search', '')
+        if search_query:
+            queryset = Product.objects.filter(Q(name__iregex=search_query) |
+                                              Q(category__name__iregex=search_query) |
+                                              Q(type__name__iregex=search_query) |
+                                              Q(material__name__iregex=search_query) |
+                                              Q(description__iregex=search_query))
+        else:
+            id_list = get_random_id()
+            queryset = Product.objects.filter(pk__in=id_list)
+        return queryset
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -18,8 +27,8 @@ class ProductListView(ListView, GetAdditionalData):
         id_list = get_random_id(recommended=False)
         new_products = Product.objects.filter(pk__in=id_list)
         context["new_products"] = new_products
-        # basket = self.get_basket(request)
-        # context["basket"] = basket
+        if 'search' in self.request.GET:
+            context['searching'] = True
         return context
 
 
@@ -34,14 +43,14 @@ class ProductDetailView(DetailView, GetAdditionalData):
         same_products = Product.objects.filter(category=obj.category).exclude(pk=obj.pk)
         context["same_products"] = same_products
         context["features"] = features
-        # basket = self.get_basket(self.request.user)
-        # context["basket"] = basket
         return context
 
 
 class CategoryListView(ListView, GetAdditionalData):
     model = Product
     template_name = 'products/category_list.html'
+    paginate_by = 6
+    allow_empty = True
 
     def get_queryset(self):
         cat_slug = self.kwargs["slug"]
@@ -75,6 +84,4 @@ class CategoryListView(ListView, GetAdditionalData):
         context["category_materials"] = self.get_materials(category)
         context["available_num"] = self.get_available(category)
         context["not_available_num"] = self.get_not_available(category)
-        # basket = self.get_basket(self.request.user)
-        # context["basket"] = basket
         return context

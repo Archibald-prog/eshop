@@ -10,9 +10,15 @@
             <div class="container-fluid">
                 <div class="row mb-5">
                     <div class="col-12">
+                        {% if searching %}
+                        <h2 class="section-title">
+                            <span>Результаты поиска</span>
+                        </h2>
+                        {% else %}
                         <h2 class="section-title">
                             <span>Рекомендуемые товары</span>
                         </h2>
+                        {% endif %}
                     </div>
                 </div>
 
@@ -26,8 +32,6 @@
 
             </div>
         </section>
-
-
 
         <section class="new-products">
             <div class="container-fluid">

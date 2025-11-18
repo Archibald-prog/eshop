@@ -4,6 +4,10 @@ from products import models
 
 
 def get_random_id(recommended=True):
+    """
+    Returns a list of IDs of products
+    to be retrieved from the database
+    """
     if recommended:
         initial_qs = models.Product.objects.filter(is_recommended=True)
     else:
