@@ -113,13 +113,16 @@ class Product(models.Model):
         blank=True
     )
     category = models.ForeignKey(
-        Category, on_delete=models.CASCADE
+        Category, on_delete=models.CASCADE,
+        verbose_name='Категория',
     )
     type = models.ForeignKey(
-        ProductType, on_delete=models.CASCADE
+        ProductType, on_delete=models.CASCADE,
+        verbose_name='Тип',
     )
     material = models.ForeignKey(
-        Material, on_delete=models.CASCADE
+        Material, on_delete=models.CASCADE,
+        verbose_name='Материал',
     )
     old_price = models.DecimalField(
         verbose_name="Старая цена",

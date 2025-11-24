@@ -48,6 +48,11 @@ class Basket(models.Model):
         auto_now_add=True
     )
 
+    class Meta:
+        verbose_name = "Корзина"
+        verbose_name_plural = "Корзина"
+        ordering = ("id",)
+
     objects = BasketQueryset().as_manager()
 
     def __str__(self):
