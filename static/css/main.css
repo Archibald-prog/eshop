@@ -405,6 +405,46 @@ ul.social-icons a:hover {
 
 /* ========================== About Us ============================ */
 
+/* ========================== Contacts ============================ */
+
+.location {
+	padding: 0px 97px;
+}
+
+.location i {
+	display: block;
+	margin: 48px auto 0px;
+	width: 30px;
+}
+
+.location h2 {
+    text-align: center;
+	color: var(--contrast-color);
+}
+.location h4 {
+	margin: 23px auto 23px;
+	text-transform: uppercase;
+	text-align: center;
+	color: var(--contrast-color);
+	font-size: 22px;
+	font-weight: 700;
+	line-height: 16px;
+}
+
+.location-title {
+    border-bottom: 1px solid var(--light-grey-color);
+}
+
+.contacts {
+	text-align: center;
+	margin-bottom: 15px;
+	line-height: 14px;
+	color:  var(--contrast-color);
+	font-size: 14px;
+	font-weight: 700;
+}
+/* ========================== Contacts ============================ */
+
 /* ========================== Footer ============================ */
 
 footer {

@@ -36,7 +36,7 @@
                     <div class="header-top-account d-flex justify-content-end">
                         <div class="btn-group me-2">
                             <div class="dropdown">
-                                <button class="btn btn-sm dropdown-toggle" type="button"
+                                <button class="btn btn-warning dropdown-toggle" type="button"
                                         data-bs-toggle="dropdown" aria-expanded="false">
                                     Профиль
                                 </button>
@@ -171,13 +171,10 @@
                             <a class="nav-link" aria-current="page" href="{% url 'main' %}">Главная</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Контакты</a>
+                            <a class="nav-link" href="{% url 'general:contact' %}">Контакты</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Оплата</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Доставка</a>
+                            <a class="nav-link" href="{% url 'general:supply' %}">Поставщикам</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
@@ -197,10 +194,10 @@
             </div>
 
             <div class="d-block d-lg-none">
-                <a href="#" class="btn p-1">
-                    <i class="fa-solid fa-heart"></i>
-                    <span class="badge text-bg-warning cart-badge bg-warning rounded-circle">3</span>
-                </a>
+<!--                <a href="#" class="btn p-1">-->
+<!--                    <i class="fa-solid fa-heart"></i>-->
+<!--                    <span class="badge text-bg-warning cart-badge bg-warning rounded-circle">3</span>-->
+<!--                </a>-->
 
                 <button class="btn p-1" type="button" data-bs-toggle="offcanvas"
                         data-bs-target="#offcanvasCart" aria-controls="offcanvasCart">

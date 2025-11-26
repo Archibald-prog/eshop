@@ -13,6 +13,10 @@
                     <li><span>{{ product.name }}</span></li>
                     {% elif category %}
                         <li><span>{{ category.name }}</span></li>
+                    {% elif contact %}
+                        <li><span>Контакты</span></li>
+                    {% elif supply %}
+                        <li><span>Поставщикам</span></li>
                     {% elif register %}
                         <li><span>Регистрация</span></li>
                     {% elif edit %}

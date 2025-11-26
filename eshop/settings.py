@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'modules.services',
     'basketapp.apps.BasketappConfig',
     'orders.apps.OrdersConfig',
+    'mainapp.apps.MainappConfig',
 ]
 
 MIDDLEWARE = [

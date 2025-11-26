@@ -1,0 +1,48 @@
+{% extends 'mainapp/base_mainapp.html' %}
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+{% block main %}
+{% include 'includes/breadcrumbs.html' %}
+
+<div class="container-fluid">
+    <div class="row mb-5">
+        <div class="col-12">
+            <h2 class="section-title">
+                <span>Наши магазины</span>
+            </h2>
+        </div>
+    </div>
+
+    <div class="row">
+        {% for contact in object_list %}
+        <div class="col-lg-4 col-md-6 mb-3">
+            <div class="product-card">
+                <div class="location m-3">
+                    <div class="mb-3">
+                        <i class="fa-solid fa-bag-shopping fa-2xl" style="color: #FFD43B;"></i>
+                    </div>
+                    <div class="location-title">
+                        <h2>{{ contact.city }}</h2>
+                    </div>
+                    <div class="contacts">
+                        <h4>Телефон</h4>
+                        <p>{{ contact.phone }}</p>
+                    </div>
+                    <div class="contacts">
+                        <h4>Email</h4>
+                        <p>{{ contact.email }}</p>
+                    </div>
+                    <div class="contacts">
+                        <h4>Адрес</h4>
+                        <p>{{ contact.address }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock main %}
+{% endblock content %}
