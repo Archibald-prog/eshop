@@ -1,0 +1,72 @@
+[
+{
+  "model": "products.material",
+  "pk": 1,
+  "fields": {
+    "name": "ДСП",
+    "slug": "dsp",
+    "description": "ДСП",
+    "is_active": true
+  }
+},
+{
+  "model": "products.material",
+  "pk": 2,
+  "fields": {
+    "name": "Велюр",
+    "slug": "velyur",
+    "description": "Велюр",
+    "is_active": true
+  }
+},
+{
+  "model": "products.material",
+  "pk": 3,
+  "fields": {
+    "name": "Массив",
+    "slug": "massiv",
+    "description": "Массив",
+    "is_active": true
+  }
+},
+{
+  "model": "products.material",
+  "pk": 4,
+  "fields": {
+    "name": "Трикотаж",
+    "slug": "trikotazh",
+    "description": "Трикотаж",
+    "is_active": true
+  }
+},
+{
+  "model": "products.material",
+  "pk": 5,
+  "fields": {
+    "name": "Металл",
+    "slug": "metall",
+    "description": "Металл",
+    "is_active": true
+  }
+},
+{
+  "model": "products.material",
+  "pk": 6,
+  "fields": {
+    "name": "МДФ",
+    "slug": "mdf",
+    "description": "МДФ: плита из спрессованной мелкодисперсной стружки",
+    "is_active": true
+  }
+},
+{
+  "model": "products.material",
+  "pk": 7,
+  "fields": {
+    "name": "Ситец",
+    "slug": "sitets",
+    "description": "Ситец",
+    "is_active": true
+  }
+}
+]

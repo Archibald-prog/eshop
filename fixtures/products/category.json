@@ -1,0 +1,57 @@
+[
+{
+  "model": "products.category",
+  "pk": 1,
+  "fields": {
+    "name": "Дом",
+    "slug": "dom",
+    "description": "Дом: мебель и предметы интерьера",
+    "category_image": "category_img/home_category_img.jpg",
+    "is_active": true
+  }
+},
+{
+  "model": "products.category",
+  "pk": 2,
+  "fields": {
+    "name": "Офис",
+    "slug": "ofis",
+    "description": "Офис: мебель для офиса",
+    "category_image": "category_img/office_category_img.jpg",
+    "is_active": true
+  }
+},
+{
+  "model": "products.category",
+  "pk": 3,
+  "fields": {
+    "name": "Модерн",
+    "slug": "modern",
+    "description": "Модерн: мебель в стиле \"Модерн\"",
+    "category_image": "category_img/modern_category_img.jpg",
+    "is_active": true
+  }
+},
+{
+  "model": "products.category",
+  "pk": 4,
+  "fields": {
+    "name": "Классика",
+    "slug": "klassika",
+    "description": "Классика: мебель в классическом стиле",
+    "category_image": "category_img/classic_category_img.jpg",
+    "is_active": true
+  }
+},
+{
+  "model": "products.category",
+  "pk": 5,
+  "fields": {
+    "name": "Спальня",
+    "slug": "spalnya",
+    "description": "Спальня: мебель и предметы интерьера для спальни",
+    "category_image": "category_img/bedroom_category_img.jpg",
+    "is_active": true
+  }
+}
+]

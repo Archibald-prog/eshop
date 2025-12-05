@@ -1,0 +1,32 @@
+[
+{
+  "model": "mainapp.contact",
+  "pk": 1,
+  "fields": {
+    "city": "Москва",
+    "phone": "8(095)3457890",
+    "email": "info@eshop.ru",
+    "address": "Варшавское шоссе, 142"
+  }
+},
+{
+  "model": "mainapp.contact",
+  "pk": 2,
+  "fields": {
+    "city": "Петербург",
+    "phone": "8(812)3476539",
+    "email": "info_spb@eshop.ru",
+    "address": "Литейный пр., д. 5/19"
+  }
+},
+{
+  "model": "mainapp.contact",
+  "pk": 3,
+  "fields": {
+    "city": "Екатеринбург",
+    "phone": "8(343)3457865",
+    "email": "info_yekat@eshop.ru",
+    "address": "Малышева., д. 9А"
+  }
+}
+]

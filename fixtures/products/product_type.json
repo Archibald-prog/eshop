@@ -1,0 +1,241 @@
+[
+{
+  "model": "products.producttype",
+  "pk": 1,
+  "fields": {
+    "name": "Кресло",
+    "slug": "kreslo",
+    "categories": [
+      1,
+      3,
+      4
+    ]
+  }
+},
+{
+  "model": "products.producttype",
+  "pk": 2,
+  "fields": {
+    "name": "Подушка декоративная",
+    "slug": "podushka-dekorativnaya",
+    "categories": [
+      1
+    ]
+  }
+},
+{
+  "model": "products.producttype",
+  "pk": 3,
+  "fields": {
+    "name": "Зеркало",
+    "slug": "zerkalo",
+    "categories": [
+      1
+    ]
+  }
+},
+{
+  "model": "products.producttype",
+  "pk": 4,
+  "fields": {
+    "name": "Прихожая",
+    "slug": "prihozhaya",
+    "categories": [
+      1
+    ]
+  }
+},
+{
+  "model": "products.producttype",
+  "pk": 5,
+  "fields": {
+    "name": "Стул барный",
+    "slug": "stul-barnyij",
+    "categories": [
+      1
+    ]
+  }
+},
+{
+  "model": "products.producttype",
+  "pk": 6,
+  "fields": {
+    "name": "Кресло-качалка",
+    "slug": "kreslo-kachalka",
+    "categories": [
+      1,
+      4
+    ]
+  }
+},
+{
+  "model": "products.producttype",
+  "pk": 7,
+  "fields": {
+    "name": "Кресло офисное",
+    "slug": "kreslo-ofisnoe",
+    "categories": [
+      2
+    ]
+  }
+},
+{
+  "model": "products.producttype",
+  "pk": 8,
+  "fields": {
+    "name": "Стул офисный",
+    "slug": "stul-ofisnyij",
+    "categories": [
+      2
+    ]
+  }
+},
+{
+  "model": "products.producttype",
+  "pk": 9,
+  "fields": {
+    "name": "Стол компьютерный",
+    "slug": "stol-kompyuternyij",
+    "categories": [
+      2
+    ]
+  }
+},
+{
+  "model": "products.producttype",
+  "pk": 10,
+  "fields": {
+    "name": "Диван",
+    "slug": "divan",
+    "categories": [
+      3,
+      4
+    ]
+  }
+},
+{
+  "model": "products.producttype",
+  "pk": 11,
+  "fields": {
+    "name": "Диван угловой",
+    "slug": "divan-uglovoj",
+    "categories": [
+      3,
+      4
+    ]
+  }
+},
+{
+  "model": "products.producttype",
+  "pk": 12,
+  "fields": {
+    "name": "Стол",
+    "slug": "stol",
+    "categories": [
+      3
+    ]
+  }
+},
+{
+  "model": "products.producttype",
+  "pk": 13,
+  "fields": {
+    "name": "Столик журнальный",
+    "slug": "stolik-zhurnalnyij",
+    "categories": [
+      3,
+      4
+    ]
+  }
+},
+{
+  "model": "products.producttype",
+  "pk": 14,
+  "fields": {
+    "name": "Табурет",
+    "slug": "taburet",
+    "categories": [
+      3,
+      4
+    ]
+  }
+},
+{
+  "model": "products.producttype",
+  "pk": 15,
+  "fields": {
+    "name": "Стеллаж",
+    "slug": "stellazh",
+    "categories": [
+      3,
+      4
+    ]
+  }
+},
+{
+  "model": "products.producttype",
+  "pk": 16,
+  "fields": {
+    "name": "Комод",
+    "slug": "komod",
+    "categories": [
+      4
+    ]
+  }
+},
+{
+  "model": "products.producttype",
+  "pk": 17,
+  "fields": {
+    "name": "Тумба прикроватная",
+    "slug": "tumba-prikrovatnaya",
+    "categories": [
+      5
+    ]
+  }
+},
+{
+  "model": "products.producttype",
+  "pk": 18,
+  "fields": {
+    "name": "Кровать",
+    "slug": "krovat",
+    "categories": [
+      5
+    ]
+  }
+},
+{
+  "model": "products.producttype",
+  "pk": 19,
+  "fields": {
+    "name": "Матрас",
+    "slug": "matras",
+    "categories": [
+      5
+    ]
+  }
+},
+{
+  "model": "products.producttype",
+  "pk": 20,
+  "fields": {
+    "name": "Подушка для сна",
+    "slug": "podushka-dlya-sna",
+    "categories": [
+      5
+    ]
+  }
+},
+{
+  "model": "products.producttype",
+  "pk": 21,
+  "fields": {
+    "name": "Комплект постельного белья",
+    "slug": "komplekt-postelnogo-belya",
+    "categories": [
+      5
+    ]
+  }
+}
+]
