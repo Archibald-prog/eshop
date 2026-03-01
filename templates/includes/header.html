@@ -73,7 +73,7 @@
                         </div>
                         {% if request.user.is_authenticated and request.user.is_superuser %}
                         <div>
-                            <a href="/admin" class="btn btn-warning">Админка</a>
+                            <a href="{% url 'admin:index' %}" class="btn btn-warning">Админка</a>
                         </div>
                         {% endif %}
                     </div>

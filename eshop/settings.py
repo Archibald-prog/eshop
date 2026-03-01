@@ -22,6 +22,9 @@ ALLOWED_HOSTS = env.list('ALLOWED_HOSTS', default=[])
 CSRF_TRUSTED_ORIGINS = ['http://79.174.77.122']
 # Application definition
 
+# Убирает предупреждение в Chrome при работе через HTTP
+SECURE_CROSS_ORIGIN_OPENER_POLICY = None
+
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
