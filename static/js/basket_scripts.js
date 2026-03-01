@@ -1,6 +1,6 @@
 $(document).ready(function () {
     const successMessage = $("#jq-notification");
-    const CartCounters = $(".goods-in-cart-count");
+    const $cartCounters = $(".goods-in-cart-count");
     const cartItemsContainer = $(".basket_items");
 
     // Универсальная функция обновления интерфейса корзины
@@ -12,7 +12,7 @@ $(document).ready(function () {
         setTimeout(() => successMessage.fadeOut(400), 5000);
 
         // Обновляем счетчик
-        let currentCount = parseInt($CartCounters.first().text() || 0);
+        let currentCount = parseInt($cartCounters.first().text() || 0);
         let totalCount = data.total_quantity;
 
         if (totalCount !== undefined) {
