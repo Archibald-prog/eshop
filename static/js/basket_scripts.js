@@ -54,6 +54,7 @@ $(document).ready(function () {
         $.ajax({
             type: "POST",
             url: url,
+            cache: false,
             data: postData,
             success: function(data) {
                 updateCartUI(data, isAdding);
@@ -63,11 +64,12 @@ $(document).ready(function () {
     });
 
     // Изменение количества
-    $(document).on("change", ".cart-change", function () {
+    $(document).on("change input", ".cart-change", function () {
         const $el = $(this);
         $.ajax({
             type: "POST",
             url: $el.data('cart-change-url'),
+            cache: false,
             data: {
                 cart_id: $el.data('cart-id'),
                 quantity: $el.val(),
