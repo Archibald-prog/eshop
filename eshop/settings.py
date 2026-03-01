@@ -107,13 +107,14 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
-STATIC_URL = 'static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-# STATICFILES_DIRS = (
-#     os.path.join(BASE_DIR, "static"),
-# )
+FORCE_SCRIPT_NAME = env('FORCE_SCRIPT_NAME')
+STATIC_URL = f'{FORCE_SCRIPT_NAME}/static/'
+# STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, "static"),
+)
 
-MEDIA_URL = '/media/'
+MEDIA_URL = f'{FORCE_SCRIPT_NAME}/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # Default primary key field type
@@ -124,5 +125,5 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 AUTH_USER_MODEL = 'authapp.ShopUser'
 
 LOGOUT_REDIRECT_URL = 'main'
-LOGIN_REDIRECT_URL = 'main'
-LOGIN_URL = '/auth/login/'
+LOGIN_REDIRECT_URL = f'{FORCE_SCRIPT_NAME}/'
+LOGIN_URL = f'{FORCE_SCRIPT_NAME}/auth/login/'

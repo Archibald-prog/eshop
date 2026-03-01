@@ -29,23 +29,35 @@
 
             <div class="row">
                 <div class="col-sm-12">
-                    <form action="{% url 'category_list' category.slug %}" method="get">
+
                         <div class="input-group mb-3">
                             <span class="input-group-text">Сортировать:</span>
-                            <select class="form-select" name="orderby">
-                                <option value="id">По умолчанию</option>
-                                <option value="name">По названию (a-я)</option>
-                                <option value="-name">По названияю (я-а)</option>
-                                <option value="price">По цене(по возрастанию)</option>
-                                <option value="-price">По цене (по убыванию)</option>
+                            <select class="form-select" name="orderby" form="filter-form">
+                                <option value="id"
+                                    {% if request.GET.orderby == 'id' or not request.GET.orderby %}selected{% endif %}>
+                                    По умолчанию
+                                </option>
+                                <option value="name"
+                                    {% if request.GET.orderby == 'name' %}selected{% endif %}>
+                                    По имени
+                                </option>
+                                <option value="price"
+                                    {% if request.GET.orderby == 'price' %}selected{% endif %}>
+                                    По цене(по возрастанию)
+                                </option>
+                                <option value='-price'
+                                    {% if request.GET.orderby == "-price" %}selected{% endif %}>
+                                    По цене (по убыванию)
+                                </option>
                             </select>
                         </div>
                         <div class="d-grid mb-3">
-                            <button type="submit" class="btn btn-secondary btn-lg">
+                            <button type="submit" form="filter-form"
+                                    class="btn btn-secondary btn-lg">
                                 Показать
                             </button>
                         </div>
-                    </form>
+
                 </div>
             </div> <!-- Selection forms -->
 
@@ -64,7 +76,7 @@
                         <ul class="pagination">
                             {% if page_obj.has_previous %}
                             <li class="page-item">
-                                <a class="page-link" href="?page={{ page_obj.previous_page_number }}">
+                                <a class="page-link" href="?page={{ page_obj.previous_page_number }}&{{ url_params }}">
                                     Previous
                                 </a>
                             </li>
@@ -82,7 +94,7 @@
                             {% endfor %}
                             {% if page_obj.has_next %}
                             <li class="page-item">
-                                <a class="page-link" href="?page={{ page_obj.next_page_number }}">
+                                <a class="page-link" href="?page={{ page_obj.next_page_number }}&{{ url_params }}">
                                     Next
                                 </a>
                             </li>

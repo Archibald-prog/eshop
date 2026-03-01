@@ -50,38 +50,59 @@ class CategoryListView(ListView, GetAdditionalData):
     model = Product
     template_name = 'products/category_list.html'
     paginate_by = 6
-    allow_empty = True
 
     def get_queryset(self):
         cat_slug = self.kwargs["slug"]
+        queryset = (Product.objects.filter(category__slug=cat_slug).
+                    select_related('category', 'type', 'material'))
+
         q_objects = Q()
         type_lst = self.request.GET.getlist("type")
         if type_lst:
-            q_objects.add(Q(type__in=type_lst), Q.AND)
+            q_objects &= Q(type__id__in=type_lst)
+
         material_lst = self.request.GET.getlist("material")
         if material_lst:
-            q_objects.add(Q(material__in=material_lst), Q.AND)
+            q_objects &= Q(material__id__in=material_lst)
+
         available_lst = self.request.GET.getlist("is_available")
         if available_lst:
-            q_objects.add(Q(is_available__in=self.get_boolean(available_lst)), Q.AND)
-        if q_objects:
-            queryset = super().get_queryset().filter(q_objects,
-                                                     category__slug=cat_slug)
-        else:
-            queryset = super().get_queryset().filter(category__slug=cat_slug)
-        return queryset
+            # Преобразуем ['True'] или ['False'] в булевы значения
+            bool_vals = [val.lower() == 'true' for val in available_lst]
+            q_objects &= Q(is_available__in=bool_vals)
 
-    def get_ordering(self):
+        queryset = queryset.filter(q_objects)
+
+        # Сортировка (всегда добавляем 'id' вторым для стабильной пагинации)
         ordering = self.request.GET.get("orderby")
-        return ordering
+        if ordering:
+            queryset = queryset.order_by(ordering, "id")
+        else:
+            queryset = queryset.order_by("id")
+
+        return queryset.distinct()
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
+
+        # Подготовка параметров для ссылок пагинации
+        params = self.request.GET.copy()
+        params.pop('page', None)
+        context['url_params'] = params.urlencode()
+
+        # Списки для сохранения галочек в чекбоксах
+        context["selected_types"] = self.request.GET.getlist("type")
+        context["selected_materials"] = self.request.GET.getlist("material")
+        context["selected_availability"] = self.request.GET.getlist(
+            "is_available")
+
         category = get_object_or_404(Category, slug=self.kwargs["slug"])
-        context["title"] = "Категория -" + str(category)
-        context["category"] = category
-        context["category_types"] = self.get_types(category)
-        context["category_materials"] = self.get_materials(category)
-        context["available_num"] = self.get_available(category)
-        context["not_available_num"] = self.get_not_available(category)
+        context.update({
+            "title": f"Категория - {category}",
+            "category": category,
+            "category_types": self.get_types(category),
+            "category_materials": self.get_materials(category),
+            "available_num": self.get_available(category),
+            "not_available_num": self.get_not_available(category),
+        })
         return context

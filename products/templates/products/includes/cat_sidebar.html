@@ -6,14 +6,15 @@
             <i class="fa-solid fa-filter"></i> Фильтры
         </button>
         <div class="collapse collapse-filters" id="collapseFilters">
-            <form action="{% url 'category_list' category.slug %}" method="get">
+            <form id="filter-form" action="" method="get">
                 <div class="filter-block">
                     <h5 class="section-title"><span>Фильтровать по типу</span></h5>
                     {% for key, val in category_types.items %}
                     <div class="form-check d-flex justify-content-between">
                         <div>
                             <input class="form-check-input" type="checkbox"
-                                   name="type" value="{{ key.id }}">
+                                   name="type" value="{{ key.id }}"
+                            {% if key.id|slugify in selected_types %}checked{% endif %}>
                             <label class="form-check-label">
                                 {{ key.name }}
                             </label>
@@ -29,7 +30,8 @@
                     <div class="form-check d-flex justify-content-between">
                         <div>
                             <input class="form-check-input" type="checkbox"
-                                   name="material" value="{{ key.id }}">
+                                   name="material" value="{{ key.id }}"
+                            {% if key.id|slugify in selected_materials %}checked{% endif %}>
                             <label class="form-check-label">
                                 {{ key.name }}
                             </label>
@@ -44,7 +46,8 @@
                     <div class="form-check d-flex justify-content-between">
                         <div>
                             <input class="form-check-input" type="checkbox"
-                                   name="is_available" value="true">
+                                   name="is_available" value="true"
+                            {% if "true" in selected_availability %}checked{% endif %}>
                             <label class="form-check-label">
                                 В магазинах
                             </label>
@@ -54,7 +57,8 @@
                     <div class="form-check d-flex justify-content-between">
                         <div>
                             <input class="form-check-input" type="checkbox"
-                                   name="is_available" value="false">
+                                   name="is_available" value="false"
+                            {% if "false" in selected_availability %}checked{% endif %}>
                             <label class="form-check-label">
                                 Под заказ
                             </label>

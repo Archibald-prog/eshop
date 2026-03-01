@@ -64,6 +64,7 @@ class BasketEdit(CartMixin, View):
         ).total_quantity()
 
         response_data = {
+            "message": "Количество товара изменено",
             "quantity": item_quantity,
             "total_quantity": total_quantity,
             "cart_items_html": self.render_basket(request),

@@ -1,5 +1,7 @@
 import random
 from pytils.translit import slugify
+from django.db.models import Count
+from django.db.models import Q
 from products import models
 
 
@@ -39,12 +41,11 @@ class GetAdditionalData:
         Returns a collection of product types
         of a given category and the number of products of each type.
         """
-        product_types = category.category_types.all()
-        products_num = [prod_type.product_set.filter(
-            category__slug=category.slug).count()
-                        for prod_type in product_types]
-        res_dict = {key: val for key, val in zip(product_types, products_num)}
-        return res_dict
+        types = category.category_types.annotate(
+            items_count=Count('product',
+                              filter=Q(product__category=category))
+        )
+        return {t: t.items_count for t in types}
 
     def get_materials(self, category):
         """
@@ -52,15 +53,13 @@ class GetAdditionalData:
         with a given category and the number
         of products made of each material.
         """
-        cat_products = models.Product.objects.filter(
-            category__slug=category.slug).select_related("material")
-        materials = [product.material for product in cat_products]
-        materials_unique = list(dict.fromkeys(materials))
-        products_num = [material.product_set.filter(
-            category__slug=category.slug).count()
-                        for material in materials_unique]
-        res_dict = {key: val for key, val in zip(materials_unique, products_num)}
-        return res_dict
+        materials = models.Material.objects.filter(
+            product__category=category
+        ).annotate(
+            items_count=Count('product',
+                              filter=Q(product__category=category))
+        ).distinct()
+        return {m: m.items_count for m in materials}
 
     def get_available(self, category):
         """
@@ -77,15 +76,6 @@ class GetAdditionalData:
         """
         return models.Product.objects.filter(category__slug=category.slug,
                                              is_available=False).count()
-
-    def get_boolean(self, field_lst):
-        raw_value = field_lst[0]
-        if isinstance(raw_value, str):
-            if raw_value.lower() == 'false':
-                raw_value = False
-            elif raw_value.lower() == 'true':
-                raw_value = True
-        return [raw_value]
 
     @staticmethod
     def get_user_basket(request):
