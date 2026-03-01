@@ -1,6 +1,6 @@
 $(document).ready(function () {
     const successMessage = $("#jq-notification");
-    const goodsInCartCount = $("#goods-in-cart-count");
+    const CartCounters = $(".goods-in-cart-count");
     const cartItemsContainer = $(".basket_items");
 
     // Универсальная функция обновления интерфейса корзины
@@ -12,14 +12,15 @@ $(document).ready(function () {
         setTimeout(() => successMessage.fadeOut(400), 5000);
 
         // Обновляем счетчик
-        let currentCount = parseInt(goodsInCartCount.text() || 0);
+        let currentCount = parseInt($CartCounters.first().text() || 0);
+        let totalCount = data.total_quantity;
 
-        if (data.total_quantity !== undefined) {
-            goodsInCartCount.text(data.total_quantity);
+        if (totalCount !== undefined) {
+            $cartCounters.text(totalCount);
         } else if (isAdd === true) {
-            goodsInCartCount.text(currentCount + 1);
+            $cartCounters.text(currentCount + 1);
         } else if (isAdd === false && data.quantity_deleted !== undefined) {
-            goodsInCartCount.text(currentCount - data.quantity_deleted);
+            $cartCounters.text(currentCount - data.quantity_deleted);
         }
 
         // Перерисовываем корзину
