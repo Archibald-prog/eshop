@@ -81,6 +81,24 @@ $(document).ready(function () {
         });
     });
 
+    // Универсальный обработчик для eshop (тот же, что в Турагентстве)
+    $(document).on("click", ".step-btn", function() {
+        const $button = $(this);
+        const $input = $button.closest(".input-group").find("input[type='number']");
+
+        const step = parseInt($input.attr("step")) || 1;
+        const min = parseInt($input.attr("min")) || 1;
+        let currentValue = parseInt($input.val()) || min;
+
+        if ($button.data("action") === "plus") {
+            $input.val(currentValue + step);
+        } else if (currentValue > min) {
+            $input.val(currentValue - step);
+        }
+
+        $input.trigger("input");
+    });
+
     // Доставка
     $("input[name='requires_delivery']").on("change", function () {
         $("#deliveryAddressField").toggle($(this).val() === "1");
