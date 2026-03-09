@@ -115,12 +115,9 @@ FORCE_SCRIPT_NAME = env('FORCE_SCRIPT_NAME')
 STATIC_URL = f'{FORCE_SCRIPT_NAME}/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-if DEBUG:
-    STATICFILES_DIRS = (
+STATICFILES_DIRS = (
         os.path.join(BASE_DIR, "static"),
     )
-else:
-    STATICFILES_DIRS = []
 
 MEDIA_URL = f'{FORCE_SCRIPT_NAME}/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
