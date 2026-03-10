@@ -1,0 +1,3501 @@
+[
+{
+    "model": "mainapp.contact",
+    "pk": 1,
+    "fields": {
+        "city": "Москва",
+        "phone": "8(095)3457890",
+        "email": "info@eshop.ru",
+        "address": "Варшавское шоссе, 142"
+    }
+},
+{
+    "model": "mainapp.contact",
+    "pk": 2,
+    "fields": {
+        "city": "Петербург",
+        "phone": "8(812)3476539",
+        "email": "info_spb@eshop.ru",
+        "address": "Литейный пр., д. 5/19"
+    }
+},
+{
+    "model": "mainapp.contact",
+    "pk": 3,
+    "fields": {
+        "city": "Екатеринбург",
+        "phone": "8(343)3457865",
+        "email": "info_yekat@eshop.ru",
+        "address": "Малышева., д. 9А"
+    }
+},
+{
+    "model": "products.category",
+    "pk": 1,
+    "fields": {
+        "name": "Дом",
+        "slug": "dom",
+        "description": "Дом: мебель и предметы интерьера",
+        "category_image": "category_img/home_category_img.jpg",
+        "is_active": true
+    }
+},
+{
+    "model": "products.category",
+    "pk": 2,
+    "fields": {
+        "name": "Офис",
+        "slug": "ofis",
+        "description": "Офис: мебель для офиса",
+        "category_image": "category_img/office_category_img.jpg",
+        "is_active": true
+    }
+},
+{
+    "model": "products.category",
+    "pk": 3,
+    "fields": {
+        "name": "Модерн",
+        "slug": "modern",
+        "description": "Модерн: мебель в стиле \"Модерн\"",
+        "category_image": "category_img/modern_category_img.jpg",
+        "is_active": true
+    }
+},
+{
+    "model": "products.category",
+    "pk": 4,
+    "fields": {
+        "name": "Классика",
+        "slug": "klassika",
+        "description": "Классика: мебель в классическом стиле",
+        "category_image": "category_img/classic_category_img.jpg",
+        "is_active": true
+    }
+},
+{
+    "model": "products.category",
+    "pk": 5,
+    "fields": {
+        "name": "Спальня",
+        "slug": "spalnya",
+        "description": "Спальня: мебель и предметы интерьера для спальни",
+        "category_image": "category_img/bedroom_category_img.jpg",
+        "is_active": true
+    }
+},
+{
+    "model": "products.producttype",
+    "pk": 1,
+    "fields": {
+        "name": "Кресло",
+        "slug": "kreslo",
+        "categories": [
+            1,
+            3,
+            4
+        ]
+    }
+},
+{
+    "model": "products.producttype",
+    "pk": 2,
+    "fields": {
+        "name": "Подушка декоративная",
+        "slug": "podushka-dekorativnaya",
+        "categories": [
+            1
+        ]
+    }
+},
+{
+    "model": "products.producttype",
+    "pk": 3,
+    "fields": {
+        "name": "Зеркало",
+        "slug": "zerkalo",
+        "categories": [
+            1
+        ]
+    }
+},
+{
+    "model": "products.producttype",
+    "pk": 4,
+    "fields": {
+        "name": "Прихожая",
+        "slug": "prihozhaya",
+        "categories": [
+            1
+        ]
+    }
+},
+{
+    "model": "products.producttype",
+    "pk": 5,
+    "fields": {
+        "name": "Стул барный",
+        "slug": "stul-barnyij",
+        "categories": [
+            1
+        ]
+    }
+},
+{
+    "model": "products.producttype",
+    "pk": 6,
+    "fields": {
+        "name": "Кресло-качалка",
+        "slug": "kreslo-kachalka",
+        "categories": [
+            1,
+            4
+        ]
+    }
+},
+{
+    "model": "products.producttype",
+    "pk": 7,
+    "fields": {
+        "name": "Кресло офисное",
+        "slug": "kreslo-ofisnoe",
+        "categories": [
+            2
+        ]
+    }
+},
+{
+    "model": "products.producttype",
+    "pk": 8,
+    "fields": {
+        "name": "Стул офисный",
+        "slug": "stul-ofisnyij",
+        "categories": [
+            2
+        ]
+    }
+},
+{
+    "model": "products.producttype",
+    "pk": 9,
+    "fields": {
+        "name": "Стол компьютерный",
+        "slug": "stol-kompyuternyij",
+        "categories": [
+            2
+        ]
+    }
+},
+{
+    "model": "products.producttype",
+    "pk": 10,
+    "fields": {
+        "name": "Диван",
+        "slug": "divan",
+        "categories": [
+            3,
+            4
+        ]
+    }
+},
+{
+    "model": "products.producttype",
+    "pk": 11,
+    "fields": {
+        "name": "Диван угловой",
+        "slug": "divan-uglovoj",
+        "categories": [
+            3,
+            4
+        ]
+    }
+},
+{
+    "model": "products.producttype",
+    "pk": 12,
+    "fields": {
+        "name": "Стол",
+        "slug": "stol",
+        "categories": [
+            3
+        ]
+    }
+},
+{
+    "model": "products.producttype",
+    "pk": 13,
+    "fields": {
+        "name": "Столик журнальный",
+        "slug": "stolik-zhurnalnyij",
+        "categories": [
+            3,
+            4
+        ]
+    }
+},
+{
+    "model": "products.producttype",
+    "pk": 14,
+    "fields": {
+        "name": "Табурет",
+        "slug": "taburet",
+        "categories": [
+            3,
+            4
+        ]
+    }
+},
+{
+    "model": "products.producttype",
+    "pk": 15,
+    "fields": {
+        "name": "Стеллаж",
+        "slug": "stellazh",
+        "categories": [
+            3,
+            4
+        ]
+    }
+},
+{
+    "model": "products.producttype",
+    "pk": 16,
+    "fields": {
+        "name": "Комод",
+        "slug": "komod",
+        "categories": [
+            4
+        ]
+    }
+},
+{
+    "model": "products.producttype",
+    "pk": 17,
+    "fields": {
+        "name": "Тумба прикроватная",
+        "slug": "tumba-prikrovatnaya",
+        "categories": [
+            5
+        ]
+    }
+},
+{
+    "model": "products.producttype",
+    "pk": 18,
+    "fields": {
+        "name": "Кровать",
+        "slug": "krovat",
+        "categories": [
+            5
+        ]
+    }
+},
+{
+    "model": "products.producttype",
+    "pk": 19,
+    "fields": {
+        "name": "Матрас",
+        "slug": "matras",
+        "categories": [
+            5
+        ]
+    }
+},
+{
+    "model": "products.producttype",
+    "pk": 20,
+    "fields": {
+        "name": "Подушка для сна",
+        "slug": "podushka-dlya-sna",
+        "categories": [
+            5
+        ]
+    }
+},
+{
+    "model": "products.producttype",
+    "pk": 21,
+    "fields": {
+        "name": "Комплект постельного белья",
+        "slug": "komplekt-postelnogo-belya",
+        "categories": [
+            5
+        ]
+    }
+},
+{
+    "model": "products.material",
+    "pk": 1,
+    "fields": {
+        "name": "ДСП",
+        "slug": "dsp",
+        "description": "ДСП",
+        "is_active": true
+    }
+},
+{
+    "model": "products.material",
+    "pk": 2,
+    "fields": {
+        "name": "Велюр",
+        "slug": "velyur",
+        "description": "Велюр",
+        "is_active": true
+    }
+},
+{
+    "model": "products.material",
+    "pk": 3,
+    "fields": {
+        "name": "Массив",
+        "slug": "massiv",
+        "description": "Массив",
+        "is_active": true
+    }
+},
+{
+    "model": "products.material",
+    "pk": 4,
+    "fields": {
+        "name": "Трикотаж",
+        "slug": "trikotazh",
+        "description": "Трикотаж",
+        "is_active": true
+    }
+},
+{
+    "model": "products.material",
+    "pk": 5,
+    "fields": {
+        "name": "Металл",
+        "slug": "metall",
+        "description": "Металл",
+        "is_active": true
+    }
+},
+{
+    "model": "products.material",
+    "pk": 6,
+    "fields": {
+        "name": "МДФ",
+        "slug": "mdf",
+        "description": "МДФ: плита из спрессованной мелкодисперсной стружки",
+        "is_active": true
+    }
+},
+{
+    "model": "products.material",
+    "pk": 7,
+    "fields": {
+        "name": "Ситец",
+        "slug": "sitets",
+        "description": "Ситец",
+        "is_active": true
+    }
+},
+{
+    "model": "products.product",
+    "pk": 1,
+    "fields": {
+        "name": "Милан",
+        "slug": "milan",
+        "description": "Прикроватная тумба Милан",
+        "category": 5,
+        "type": 17,
+        "material": 1,
+        "old_price": "3000.00",
+        "price": "2390.00",
+        "quantity": 36,
+        "is_available": true,
+        "is_recommended": true,
+        "is_new": false,
+        "is_hit": false,
+        "is_active": true
+    }
+},
+{
+    "model": "products.product",
+    "pk": 2,
+    "fields": {
+        "name": "Холли",
+        "slug": "holli",
+        "description": "Кровать с подъемным механизмом",
+        "category": 5,
+        "type": 18,
+        "material": 2,
+        "old_price": "57990.00",
+        "price": "28995.00",
+        "quantity": 10,
+        "is_available": true,
+        "is_recommended": false,
+        "is_new": true,
+        "is_hit": true,
+        "is_active": true
+    }
+},
+{
+    "model": "products.product",
+    "pk": 3,
+    "fields": {
+        "name": "Дюваль",
+        "slug": "dyuval",
+        "description": "Прикроватная тумба Дюваль",
+        "category": 5,
+        "type": 17,
+        "material": 1,
+        "old_price": "2600.00",
+        "price": "1700.00",
+        "quantity": 6,
+        "is_available": true,
+        "is_recommended": false,
+        "is_new": true,
+        "is_hit": true,
+        "is_active": true
+    }
+},
+{
+    "model": "products.product",
+    "pk": 4,
+    "fields": {
+        "name": "Томсон",
+        "slug": "tomson",
+        "description": "Кровать с подъемным механизмом",
+        "category": 5,
+        "type": 18,
+        "material": 1,
+        "old_price": "30000.00",
+        "price": "27300.00",
+        "quantity": 5,
+        "is_available": true,
+        "is_recommended": true,
+        "is_new": false,
+        "is_hit": true,
+        "is_active": true
+    }
+},
+{
+    "model": "products.product",
+    "pk": 5,
+    "fields": {
+        "name": "Барди",
+        "slug": "bardi",
+        "description": "Двуспальная кровать из массива сосны",
+        "category": 5,
+        "type": 18,
+        "material": 3,
+        "old_price": "33700.00",
+        "price": "15450.00",
+        "quantity": 1,
+        "is_available": true,
+        "is_recommended": false,
+        "is_new": true,
+        "is_hit": true,
+        "is_active": true
+    }
+},
+{
+    "model": "products.product",
+    "pk": 6,
+    "fields": {
+        "name": "Прага",
+        "slug": "praga",
+        "description": "Двуспальная кровать Прага",
+        "category": 5,
+        "type": 18,
+        "material": 3,
+        "old_price": "22140.00",
+        "price": "18490.00",
+        "quantity": 6,
+        "is_available": true,
+        "is_recommended": true,
+        "is_new": false,
+        "is_hit": false,
+        "is_active": true
+    }
+},
+{
+    "model": "products.product",
+    "pk": 7,
+    "fields": {
+        "name": "Status Ultra",
+        "slug": "status-ultra",
+        "description": "Матрас пружинный",
+        "category": 5,
+        "type": 19,
+        "material": 4,
+        "old_price": "94990.00",
+        "price": "37995.00",
+        "quantity": 8,
+        "is_available": true,
+        "is_recommended": false,
+        "is_new": true,
+        "is_hit": true,
+        "is_active": true
+    }
+},
+{
+    "model": "products.product",
+    "pk": 8,
+    "fields": {
+        "name": "Джанго",
+        "slug": "dzhango",
+        "description": "Удобная подушка для сна",
+        "category": 5,
+        "type": 20,
+        "material": 4,
+        "old_price": "9900.00",
+        "price": "4900.00",
+        "quantity": 8,
+        "is_available": true,
+        "is_recommended": true,
+        "is_new": false,
+        "is_hit": true,
+        "is_active": true
+    }
+},
+{
+    "model": "products.product",
+    "pk": 9,
+    "fields": {
+        "name": "Форест",
+        "slug": "forest",
+        "description": "Комплект постельного белья для комфортного сна",
+        "category": 5,
+        "type": 21,
+        "material": 7,
+        "old_price": "5000.00",
+        "price": "3570.00",
+        "quantity": 3,
+        "is_available": true,
+        "is_recommended": true,
+        "is_new": false,
+        "is_hit": true,
+        "is_active": true
+    }
+},
+{
+    "model": "products.product",
+    "pk": 10,
+    "fields": {
+        "name": "Фернандес",
+        "slug": "fernandes",
+        "description": "Диван угловой в классическом стиле",
+        "category": 4,
+        "type": 11,
+        "material": 2,
+        "old_price": "15000.00",
+        "price": "13000.00",
+        "quantity": 5,
+        "is_available": true,
+        "is_recommended": true,
+        "is_new": false,
+        "is_hit": true,
+        "is_active": true
+    }
+},
+{
+    "model": "products.product",
+    "pk": 11,
+    "fields": {
+        "name": "Юнит",
+        "slug": "yunit",
+        "description": "Журнальный столик белый, выполненный в классическом стиле",
+        "category": 4,
+        "type": 13,
+        "material": 3,
+        "old_price": "8500.00",
+        "price": "10500.00",
+        "quantity": 2,
+        "is_available": true,
+        "is_recommended": false,
+        "is_new": true,
+        "is_hit": true,
+        "is_active": true
+    }
+},
+{
+    "model": "products.product",
+    "pk": 12,
+    "fields": {
+        "name": "Total Black",
+        "slug": "total-black",
+        "description": "Журнальный столик черный, выполненный в классическом стиле",
+        "category": 4,
+        "type": 13,
+        "material": 5,
+        "old_price": "9300.00",
+        "price": "10300.00",
+        "quantity": 0,
+        "is_available": false,
+        "is_recommended": false,
+        "is_new": true,
+        "is_hit": true,
+        "is_active": false
+    }
+},
+{
+    "model": "products.product",
+    "pk": 13,
+    "fields": {
+        "name": "Orange",
+        "slug": "orange",
+        "description": "Кресло современного дизайна",
+        "category": 4,
+        "type": 1,
+        "material": 2,
+        "old_price": "4100.00",
+        "price": "2900.00",
+        "quantity": 2,
+        "is_available": true,
+        "is_recommended": false,
+        "is_new": true,
+        "is_hit": true,
+        "is_active": true
+    }
+},
+{
+    "model": "products.product",
+    "pk": 14,
+    "fields": {
+        "name": "Пиквик",
+        "slug": "pikvik",
+        "description": "Удобное кресло-качалка в классическом дизайне",
+        "category": 4,
+        "type": 6,
+        "material": 3,
+        "old_price": "3000.00",
+        "price": "2300.00",
+        "quantity": 4,
+        "is_available": true,
+        "is_recommended": true,
+        "is_new": false,
+        "is_hit": true,
+        "is_active": true
+    }
+},
+{
+    "model": "products.product",
+    "pk": 15,
+    "fields": {
+        "name": "Bookstore",
+        "slug": "bookstore",
+        "description": "Стеллаж для удобного хранения книг",
+        "category": 4,
+        "type": 15,
+        "material": 6,
+        "old_price": "2000.00",
+        "price": "1500.00",
+        "quantity": 6,
+        "is_available": true,
+        "is_recommended": true,
+        "is_new": false,
+        "is_hit": false,
+        "is_active": true
+    }
+},
+{
+    "model": "products.product",
+    "pk": 16,
+    "fields": {
+        "name": "Мерлен",
+        "slug": "merlen",
+        "description": "Стеллаж для книг",
+        "category": 4,
+        "type": 15,
+        "material": 6,
+        "old_price": "2000.00",
+        "price": "1500.00",
+        "quantity": 3,
+        "is_available": true,
+        "is_recommended": true,
+        "is_new": false,
+        "is_hit": true,
+        "is_active": true
+    }
+},
+{
+    "model": "products.product",
+    "pk": 17,
+    "fields": {
+        "name": "White Box",
+        "slug": "white-box",
+        "description": "Комод в классическом стиле",
+        "category": 4,
+        "type": 16,
+        "material": 1,
+        "old_price": "3100.00",
+        "price": "2800.00",
+        "quantity": 7,
+        "is_available": true,
+        "is_recommended": false,
+        "is_new": true,
+        "is_hit": true,
+        "is_active": true
+    }
+},
+{
+    "model": "products.product",
+    "pk": 18,
+    "fields": {
+        "name": "Black Box",
+        "slug": "black-box",
+        "description": "Комод в классическом стиле",
+        "category": 4,
+        "type": 16,
+        "material": 1,
+        "old_price": "2130.00",
+        "price": "2000.00",
+        "quantity": 5,
+        "is_available": true,
+        "is_recommended": true,
+        "is_new": false,
+        "is_hit": true,
+        "is_active": true
+    }
+},
+{
+    "model": "products.product",
+    "pk": 19,
+    "fields": {
+        "name": "Рио",
+        "slug": "rio",
+        "description": "Кресло мягкое",
+        "category": 1,
+        "type": 1,
+        "material": 2,
+        "old_price": "10590.00",
+        "price": "8600.00",
+        "quantity": 4,
+        "is_available": true,
+        "is_recommended": true,
+        "is_new": false,
+        "is_hit": false,
+        "is_active": true
+    }
+},
+{
+    "model": "products.product",
+    "pk": 20,
+    "fields": {
+        "name": "Pinky",
+        "slug": "pinky",
+        "description": "Удобная и стильная декоративная подушка",
+        "category": 1,
+        "type": 2,
+        "material": 7,
+        "old_price": "4000.00",
+        "price": "3800.00",
+        "quantity": 7,
+        "is_available": true,
+        "is_recommended": false,
+        "is_new": true,
+        "is_hit": true,
+        "is_active": true
+    }
+},
+{
+    "model": "products.product",
+    "pk": 21,
+    "fields": {
+        "name": "Mirror",
+        "slug": "mirror",
+        "description": "Зеркало напольное",
+        "category": 1,
+        "type": 3,
+        "material": 6,
+        "old_price": "1500.00",
+        "price": "980.00",
+        "quantity": 2,
+        "is_available": true,
+        "is_recommended": true,
+        "is_new": false,
+        "is_hit": true,
+        "is_active": true
+    }
+},
+{
+    "model": "products.product",
+    "pk": 22,
+    "fields": {
+        "name": "Browny",
+        "slug": "browny",
+        "description": "Декоративная подушка дизайнерская",
+        "category": 1,
+        "type": 2,
+        "material": 7,
+        "old_price": "3500.00",
+        "price": "3400.00",
+        "quantity": 3,
+        "is_available": true,
+        "is_recommended": true,
+        "is_new": false,
+        "is_hit": true,
+        "is_active": true
+    }
+},
+{
+    "model": "products.product",
+    "pk": 23,
+    "fields": {
+        "name": "Looking Glass",
+        "slug": "looking-glass",
+        "description": "Зеркало для прихожей",
+        "category": 1,
+        "type": 3,
+        "material": 6,
+        "old_price": "3000.00",
+        "price": "2800.00",
+        "quantity": 2,
+        "is_available": true,
+        "is_recommended": false,
+        "is_new": true,
+        "is_hit": true,
+        "is_active": true
+    }
+},
+{
+    "model": "products.product",
+    "pk": 24,
+    "fields": {
+        "name": "Бодрум",
+        "slug": "bodrum",
+        "description": "Удобная прихожая в современном стиле",
+        "category": 1,
+        "type": 4,
+        "material": 1,
+        "old_price": "14380.00",
+        "price": "7190.00",
+        "quantity": 5,
+        "is_available": true,
+        "is_recommended": true,
+        "is_new": false,
+        "is_hit": true,
+        "is_active": true
+    }
+},
+{
+    "model": "products.product",
+    "pk": 25,
+    "fields": {
+        "name": "Whithe Rabbit",
+        "slug": "whithe-rabbit",
+        "description": "Стильное зеркало в прихожую",
+        "category": 1,
+        "type": 3,
+        "material": 5,
+        "old_price": "2300.00",
+        "price": "2000.00",
+        "quantity": 0,
+        "is_available": false,
+        "is_recommended": true,
+        "is_new": false,
+        "is_hit": false,
+        "is_active": false
+    }
+},
+{
+    "model": "products.product",
+    "pk": 26,
+    "fields": {
+        "name": "Lounge",
+        "slug": "lounge",
+        "description": "Удобное кресло-качалка для расслабления",
+        "category": 1,
+        "type": 6,
+        "material": 3,
+        "old_price": "5500.00",
+        "price": "5000.00",
+        "quantity": 3,
+        "is_available": true,
+        "is_recommended": false,
+        "is_new": true,
+        "is_hit": false,
+        "is_active": true
+    }
+},
+{
+    "model": "products.product",
+    "pk": 27,
+    "fields": {
+        "name": "Red Devil",
+        "slug": "red-devil",
+        "description": "Барный стул для дома",
+        "category": 1,
+        "type": 5,
+        "material": 5,
+        "old_price": "2900.00",
+        "price": "2100.00",
+        "quantity": 7,
+        "is_available": true,
+        "is_recommended": false,
+        "is_new": true,
+        "is_hit": true,
+        "is_active": true
+    }
+},
+{
+    "model": "products.product",
+    "pk": 28,
+    "fields": {
+        "name": "Антонио",
+        "slug": "antonio",
+        "description": "Угловой диван Антонио",
+        "category": 3,
+        "type": 11,
+        "material": 2,
+        "old_price": "41900.00",
+        "price": "28900.00",
+        "quantity": 0,
+        "is_available": false,
+        "is_recommended": false,
+        "is_new": true,
+        "is_hit": true,
+        "is_active": true
+    }
+},
+{
+    "model": "products.product",
+    "pk": 29,
+    "fields": {
+        "name": "Атланта",
+        "slug": "atlanta",
+        "description": "Диван в современном стиле",
+        "category": 3,
+        "type": 10,
+        "material": 2,
+        "old_price": "29000.00",
+        "price": "24500.00",
+        "quantity": 4,
+        "is_available": true,
+        "is_recommended": true,
+        "is_new": false,
+        "is_hit": true,
+        "is_active": true
+    }
+},
+{
+    "model": "products.product",
+    "pk": 30,
+    "fields": {
+        "name": "Бостон",
+        "slug": "boston",
+        "description": "Стол в стиле \"Модерн\"",
+        "category": 3,
+        "type": 12,
+        "material": 6,
+        "old_price": "9900.00",
+        "price": "7800.00",
+        "quantity": 5,
+        "is_available": true,
+        "is_recommended": false,
+        "is_new": true,
+        "is_hit": true,
+        "is_active": true
+    }
+},
+{
+    "model": "products.product",
+    "pk": 31,
+    "fields": {
+        "name": "White Snow",
+        "slug": "white-snow",
+        "description": "Удобное кресло для гостиной",
+        "category": 3,
+        "type": 1,
+        "material": 2,
+        "old_price": "12000.00",
+        "price": "9000.00",
+        "quantity": 6,
+        "is_available": true,
+        "is_recommended": false,
+        "is_new": true,
+        "is_hit": false,
+        "is_active": true
+    }
+},
+{
+    "model": "products.product",
+    "pk": 32,
+    "fields": {
+        "name": "Фишер",
+        "slug": "fisher",
+        "description": "Журнальный столик для гостиной",
+        "category": 3,
+        "type": 13,
+        "material": 3,
+        "old_price": "3800.00",
+        "price": "2800.00",
+        "quantity": 6,
+        "is_available": true,
+        "is_recommended": false,
+        "is_new": true,
+        "is_hit": true,
+        "is_active": true
+    }
+},
+{
+    "model": "products.product",
+    "pk": 33,
+    "fields": {
+        "name": "Эклер",
+        "slug": "ekler",
+        "description": "Табурет в белом цвете",
+        "category": 3,
+        "type": 14,
+        "material": 3,
+        "old_price": "2000.00",
+        "price": "1190.00",
+        "quantity": 0,
+        "is_available": false,
+        "is_recommended": true,
+        "is_new": false,
+        "is_hit": false,
+        "is_active": true
+    }
+},
+{
+    "model": "products.product",
+    "pk": 34,
+    "fields": {
+        "name": "Мэрион",
+        "slug": "merion",
+        "description": "Кресло для гостиной, выполненное в изысканном стиле",
+        "category": 3,
+        "type": 1,
+        "material": 2,
+        "old_price": "13300.00",
+        "price": "11300.00",
+        "quantity": 4,
+        "is_available": true,
+        "is_recommended": true,
+        "is_new": false,
+        "is_hit": true,
+        "is_active": true
+    }
+},
+{
+    "model": "products.product",
+    "pk": 35,
+    "fields": {
+        "name": "Арни",
+        "slug": "arni",
+        "description": "Мягкое кресло в светлых тонах",
+        "category": 3,
+        "type": 1,
+        "material": 2,
+        "old_price": "21000.00",
+        "price": "15000.00",
+        "quantity": 4,
+        "is_available": true,
+        "is_recommended": false,
+        "is_new": true,
+        "is_hit": true,
+        "is_active": true
+    }
+},
+{
+    "model": "products.product",
+    "pk": 36,
+    "fields": {
+        "name": "Full House",
+        "slug": "full-house",
+        "description": "Стеллаж для гостиной",
+        "category": 3,
+        "type": 15,
+        "material": 3,
+        "old_price": "3400.00",
+        "price": "2400.00",
+        "quantity": 0,
+        "is_available": false,
+        "is_recommended": true,
+        "is_new": false,
+        "is_hit": true,
+        "is_active": true
+    }
+},
+{
+    "model": "products.product",
+    "pk": 37,
+    "fields": {
+        "name": "Джозеф",
+        "slug": "dzhozef",
+        "description": "Кресло офисное для удобной работы",
+        "category": 2,
+        "type": 7,
+        "material": 5,
+        "old_price": "3450.00",
+        "price": "3000.00",
+        "quantity": 8,
+        "is_available": true,
+        "is_recommended": false,
+        "is_new": true,
+        "is_hit": true,
+        "is_active": true
+    }
+},
+{
+    "model": "products.product",
+    "pk": 38,
+    "fields": {
+        "name": "Ливерпуль",
+        "slug": "liverpul",
+        "description": "Стол компьютерный для дома и офиса",
+        "category": 2,
+        "type": 9,
+        "material": 1,
+        "old_price": "5000.00",
+        "price": "3600.00",
+        "quantity": 4,
+        "is_available": true,
+        "is_recommended": true,
+        "is_new": false,
+        "is_hit": true,
+        "is_active": true
+    }
+},
+{
+    "model": "products.product",
+    "pk": 39,
+    "fields": {
+        "name": "Green Day",
+        "slug": "green-day",
+        "description": "Кресло офисное для дома",
+        "category": 2,
+        "type": 7,
+        "material": 5,
+        "old_price": "4700.00",
+        "price": "4000.00",
+        "quantity": 5,
+        "is_available": true,
+        "is_recommended": false,
+        "is_new": true,
+        "is_hit": false,
+        "is_active": true
+    }
+},
+{
+    "model": "products.product",
+    "pk": 40,
+    "fields": {
+        "name": "Аскет",
+        "slug": "asket",
+        "description": "Стол компьютерный в минималистичном дизайне",
+        "category": 2,
+        "type": 9,
+        "material": 5,
+        "old_price": "3100.00",
+        "price": "2900.00",
+        "quantity": 7,
+        "is_available": true,
+        "is_recommended": false,
+        "is_new": true,
+        "is_hit": true,
+        "is_active": true
+    }
+},
+{
+    "model": "products.product",
+    "pk": 41,
+    "fields": {
+        "name": "Дэвид",
+        "slug": "devid",
+        "description": "Стол компьютерный в белом цвете",
+        "category": 2,
+        "type": 9,
+        "material": 1,
+        "old_price": "5200.00",
+        "price": "4200.00",
+        "quantity": 3,
+        "is_available": true,
+        "is_recommended": true,
+        "is_new": false,
+        "is_hit": true,
+        "is_active": true
+    }
+},
+{
+    "model": "products.product",
+    "pk": 42,
+    "fields": {
+        "name": "Прадо",
+        "slug": "prado",
+        "description": "Стул для офиса",
+        "category": 2,
+        "type": 8,
+        "material": 5,
+        "old_price": "1700.00",
+        "price": "1500.00",
+        "quantity": 2,
+        "is_available": true,
+        "is_recommended": true,
+        "is_new": false,
+        "is_hit": true,
+        "is_active": true
+    }
+},
+{
+    "model": "products.product",
+    "pk": 43,
+    "fields": {
+        "name": "Хилтон",
+        "slug": "hilton",
+        "description": "Стильный компьютерный стол, выполненный в белом цвете",
+        "category": 2,
+        "type": 9,
+        "material": 1,
+        "old_price": "2890.00",
+        "price": "2190.00",
+        "quantity": 4,
+        "is_available": true,
+        "is_recommended": false,
+        "is_new": true,
+        "is_hit": true,
+        "is_active": true
+    }
+},
+{
+    "model": "products.product",
+    "pk": 44,
+    "fields": {
+        "name": "Форсаж",
+        "slug": "forsazh",
+        "description": "Стол угловой компьютерный",
+        "category": 2,
+        "type": 9,
+        "material": 1,
+        "old_price": "5000.00",
+        "price": "4000.00",
+        "quantity": 3,
+        "is_available": true,
+        "is_recommended": true,
+        "is_new": false,
+        "is_hit": false,
+        "is_active": true
+    }
+},
+{
+    "model": "products.product",
+    "pk": 45,
+    "fields": {
+        "name": "Junior",
+        "slug": "junior",
+        "description": "Стол компьютерный для школьников",
+        "category": 2,
+        "type": 9,
+        "material": 1,
+        "old_price": "4140.00",
+        "price": "3700.00",
+        "quantity": 3,
+        "is_available": true,
+        "is_recommended": true,
+        "is_new": false,
+        "is_hit": false,
+        "is_active": true
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 1,
+    "fields": {
+        "name": "bedroom-1-card",
+        "image": "product_images/bedroom_1__card.png",
+        "image_type": "c",
+        "product": 1
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 2,
+    "fields": {
+        "name": "bedroom-1-slider-1",
+        "image": "product_images/bedroom_1_slider-1.png",
+        "image_type": "s",
+        "product": 1
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 3,
+    "fields": {
+        "name": "bedroom-1-slider-2",
+        "image": "product_images/bedroom_1_slider-2.png",
+        "image_type": "s",
+        "product": 1
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 4,
+    "fields": {
+        "name": "bedroom-1-slider-3",
+        "image": "product_images/bedroom_1_slider-3.png",
+        "image_type": "s",
+        "product": 1
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 5,
+    "fields": {
+        "name": "bedroom-2-card",
+        "image": "product_images/bedroom_2_card.png",
+        "image_type": "c",
+        "product": 2
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 6,
+    "fields": {
+        "name": "bedroom-2-slider-1",
+        "image": "product_images/bedroom_2_slider-1.png",
+        "image_type": "s",
+        "product": 2
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 7,
+    "fields": {
+        "name": "bedroom-2-slider-2",
+        "image": "product_images/bedroom_2_slider-2.png",
+        "image_type": "s",
+        "product": 2
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 8,
+    "fields": {
+        "name": "bedroom-2-slider-3",
+        "image": "product_images/bedroom_2_slider-3.png",
+        "image_type": "s",
+        "product": 2
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 9,
+    "fields": {
+        "name": "bedroom-3-card",
+        "image": "product_images/bedroom_3_card.png",
+        "image_type": "c",
+        "product": 3
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 10,
+    "fields": {
+        "name": "bedroom-3-slider-1",
+        "image": "product_images/bedroom_3_slider-1.png",
+        "image_type": "s",
+        "product": 3
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 11,
+    "fields": {
+        "name": "bedroom-3-slider-2",
+        "image": "product_images/bedroom_3_slider-2.png",
+        "image_type": "s",
+        "product": 3
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 12,
+    "fields": {
+        "name": "bedroom-4-card",
+        "image": "product_images/bedroom_4_card.png",
+        "image_type": "c",
+        "product": 4
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 13,
+    "fields": {
+        "name": "bedroom-4-slider-1",
+        "image": "product_images/bedroom_4_slider-1.png",
+        "image_type": "s",
+        "product": 4
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 14,
+    "fields": {
+        "name": "bedroom-4-slider-2",
+        "image": "product_images/bedroom_4_slider-2.png",
+        "image_type": "s",
+        "product": 4
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 15,
+    "fields": {
+        "name": "bedroom-4-slider-3",
+        "image": "product_images/bedroom_4_slider-3.png",
+        "image_type": "s",
+        "product": 4
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 16,
+    "fields": {
+        "name": "bedroom-5-card",
+        "image": "product_images/bedroom_5_card.png",
+        "image_type": "c",
+        "product": 5
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 17,
+    "fields": {
+        "name": "bedroom-5-slider-1",
+        "image": "product_images/bedroom_5_slider-1.png",
+        "image_type": "s",
+        "product": 5
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 18,
+    "fields": {
+        "name": "bedroom-5-slider-2",
+        "image": "product_images/bedroom_5_slider-2.png",
+        "image_type": "s",
+        "product": 5
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 19,
+    "fields": {
+        "name": "bedroom-6-card",
+        "image": "product_images/bedroom_6_card.png",
+        "image_type": "c",
+        "product": 6
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 20,
+    "fields": {
+        "name": "berdoom-6-slider-1",
+        "image": "product_images/bedroom_6_slider-1.png",
+        "image_type": "s",
+        "product": 6
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 21,
+    "fields": {
+        "name": "berdoom-6-slider-2",
+        "image": "product_images/bedroom_6_slider-2.png",
+        "image_type": "s",
+        "product": 6
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 22,
+    "fields": {
+        "name": "berdoom-6-slider-3",
+        "image": "product_images/bedroom_6_slider-3.png",
+        "image_type": "s",
+        "product": 6
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 23,
+    "fields": {
+        "name": "bedroom-7-card",
+        "image": "product_images/bedroom_7_card.png",
+        "image_type": "c",
+        "product": 7
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 24,
+    "fields": {
+        "name": "bedroom-7-slider-1",
+        "image": "product_images/bedroom_7_slider-1.png",
+        "image_type": "s",
+        "product": 7
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 25,
+    "fields": {
+        "name": "bedroom-7-slider-2",
+        "image": "product_images/bedroom_7_slider-2.png",
+        "image_type": "s",
+        "product": 7
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 26,
+    "fields": {
+        "name": "bedroom-7-slider-3",
+        "image": "product_images/bedroom_7_slider-3.png",
+        "image_type": "s",
+        "product": 7
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 27,
+    "fields": {
+        "name": "bedroom-8-card",
+        "image": "product_images/bedroom_8_card.png",
+        "image_type": "c",
+        "product": 8
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 28,
+    "fields": {
+        "name": "bedroom-8-slider-1",
+        "image": "product_images/bedroom_8_slider-1.png",
+        "image_type": "s",
+        "product": 8
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 29,
+    "fields": {
+        "name": "bedroom-8-slider-2",
+        "image": "product_images/bedroom_8_slider-2.png",
+        "image_type": "s",
+        "product": 8
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 30,
+    "fields": {
+        "name": "bedroom-9-card",
+        "image": "product_images/bedroom_9_card.png",
+        "image_type": "c",
+        "product": 9
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 31,
+    "fields": {
+        "name": "bedroom-9-slider-1",
+        "image": "product_images/bedroom_9_slider-1.png",
+        "image_type": "s",
+        "product": 9
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 32,
+    "fields": {
+        "name": "bedroom-9-slider-2",
+        "image": "product_images/bedroom_9_slider-2.png",
+        "image_type": "s",
+        "product": 9
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 33,
+    "fields": {
+        "name": "bedroom-9-slider-3",
+        "image": "product_images/bedroom_9_slider-3.png",
+        "image_type": "s",
+        "product": 9
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 34,
+    "fields": {
+        "name": "classic-1-card",
+        "image": "product_images/classic_1_card.png",
+        "image_type": "c",
+        "product": 10
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 35,
+    "fields": {
+        "name": "classic-1-slider-1",
+        "image": "product_images/classic_1_slider-1.png",
+        "image_type": "s",
+        "product": 10
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 36,
+    "fields": {
+        "name": "classic-1-slider-2",
+        "image": "product_images/classic_1_slider-2.png",
+        "image_type": "s",
+        "product": 10
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 37,
+    "fields": {
+        "name": "classic-1-slider-3",
+        "image": "product_images/classic_1_slider-3.png",
+        "image_type": "s",
+        "product": 10
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 38,
+    "fields": {
+        "name": "classic-2-card",
+        "image": "product_images/classic_2_card.png",
+        "image_type": "c",
+        "product": 11
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 39,
+    "fields": {
+        "name": "classic-2-slider-1",
+        "image": "product_images/classic_2_slider-1.png",
+        "image_type": "s",
+        "product": 11
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 40,
+    "fields": {
+        "name": "classic-2-slider-2",
+        "image": "product_images/classic_2_slider-2.png",
+        "image_type": "s",
+        "product": 11
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 41,
+    "fields": {
+        "name": "classic-2-slider-3",
+        "image": "product_images/classic_2_slider-3.png",
+        "image_type": "s",
+        "product": 11
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 42,
+    "fields": {
+        "name": "classic-3-card",
+        "image": "product_images/classic_3_card.png",
+        "image_type": "c",
+        "product": 12
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 43,
+    "fields": {
+        "name": "classic-3-slider-1",
+        "image": "product_images/classic_3_slider-1.png",
+        "image_type": "s",
+        "product": 12
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 44,
+    "fields": {
+        "name": "classic-3-slider-2",
+        "image": "product_images/classic_3_slider-2.png",
+        "image_type": "s",
+        "product": 12
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 45,
+    "fields": {
+        "name": "classic-3-slider-3",
+        "image": "product_images/classic_3_slider-3.png",
+        "image_type": "s",
+        "product": 12
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 46,
+    "fields": {
+        "name": "classic-4-card",
+        "image": "product_images/classic_4_card.png",
+        "image_type": "c",
+        "product": 13
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 47,
+    "fields": {
+        "name": "classic-4-slider-1",
+        "image": "product_images/classic_4_slider-1.png",
+        "image_type": "s",
+        "product": 13
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 48,
+    "fields": {
+        "name": "classic-4-slider-2",
+        "image": "product_images/classic_4_slider-2.png",
+        "image_type": "s",
+        "product": 13
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 49,
+    "fields": {
+        "name": "classic-4-slider-3",
+        "image": "product_images/classic_4_slider-3.png",
+        "image_type": "s",
+        "product": 13
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 50,
+    "fields": {
+        "name": "classic-5-card",
+        "image": "product_images/classic_5_card.png",
+        "image_type": "c",
+        "product": 14
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 51,
+    "fields": {
+        "name": "classic-5-slider-1",
+        "image": "product_images/classic_5_slider-1.png",
+        "image_type": "s",
+        "product": 14
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 52,
+    "fields": {
+        "name": "classic-5-slider-2",
+        "image": "product_images/classic_5_slider-2.png",
+        "image_type": "s",
+        "product": 14
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 53,
+    "fields": {
+        "name": "classic-5-slider-3",
+        "image": "product_images/classic_5_slider-3.png",
+        "image_type": "s",
+        "product": 14
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 54,
+    "fields": {
+        "name": "classic-6-card",
+        "image": "product_images/classic_6_card.png",
+        "image_type": "c",
+        "product": 15
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 55,
+    "fields": {
+        "name": "classic-6-slider-1",
+        "image": "product_images/classic_6_slider-1.png",
+        "image_type": "s",
+        "product": 15
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 56,
+    "fields": {
+        "name": "classic-6-slider-2",
+        "image": "product_images/classic_6_slider-2.png",
+        "image_type": "s",
+        "product": 15
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 57,
+    "fields": {
+        "name": "classic-6-slider-3",
+        "image": "product_images/classic_6_slider-3.png",
+        "image_type": "s",
+        "product": 15
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 58,
+    "fields": {
+        "name": "classic-7-card",
+        "image": "product_images/classic_7_card.png",
+        "image_type": "c",
+        "product": 16
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 59,
+    "fields": {
+        "name": "classic-7-slider-1",
+        "image": "product_images/classic_7_slider-1.png",
+        "image_type": "s",
+        "product": 16
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 60,
+    "fields": {
+        "name": "classic-7-slider-2",
+        "image": "product_images/classic_7_slider-2.png",
+        "image_type": "s",
+        "product": 16
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 61,
+    "fields": {
+        "name": "classic-7-slider-3",
+        "image": "product_images/classic_7_slider-3.png",
+        "image_type": "s",
+        "product": 16
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 62,
+    "fields": {
+        "name": "classic-8-card",
+        "image": "product_images/classic_8_card.png",
+        "image_type": "c",
+        "product": 17
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 63,
+    "fields": {
+        "name": "classic-8-slider-1",
+        "image": "product_images/classic_8_slider-1.png",
+        "image_type": "s",
+        "product": 17
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 64,
+    "fields": {
+        "name": "classic-8-slider-2",
+        "image": "product_images/classic_8_slider-2.png",
+        "image_type": "s",
+        "product": 17
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 65,
+    "fields": {
+        "name": "classic-8-slider-3",
+        "image": "product_images/classic_8_slider-3.png",
+        "image_type": "s",
+        "product": 17
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 66,
+    "fields": {
+        "name": "classic-9-card",
+        "image": "product_images/classic_9_card.png",
+        "image_type": "c",
+        "product": 18
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 67,
+    "fields": {
+        "name": "classic-9-slider-1",
+        "image": "product_images/classic_9_slider-1.png",
+        "image_type": "s",
+        "product": 18
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 68,
+    "fields": {
+        "name": "classic-9-slider-2",
+        "image": "product_images/classic_9_slider-2.png",
+        "image_type": "s",
+        "product": 18
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 69,
+    "fields": {
+        "name": "home-1-card",
+        "image": "product_images/home_1_card.png",
+        "image_type": "c",
+        "product": 19
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 70,
+    "fields": {
+        "name": "home-1-slider-1",
+        "image": "product_images/home_1_slider-1.png",
+        "image_type": "s",
+        "product": 19
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 71,
+    "fields": {
+        "name": "home-1-slider-2",
+        "image": "product_images/home_1_slider-2.png",
+        "image_type": "s",
+        "product": 19
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 72,
+    "fields": {
+        "name": "home-1-slider-3",
+        "image": "product_images/home_1_slider-3.png",
+        "image_type": "s",
+        "product": 19
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 73,
+    "fields": {
+        "name": "home-2-card",
+        "image": "product_images/home_2_card.png",
+        "image_type": "c",
+        "product": 20
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 74,
+    "fields": {
+        "name": "home-2-slider-1",
+        "image": "product_images/home_2_slider-1.png",
+        "image_type": "s",
+        "product": 20
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 75,
+    "fields": {
+        "name": "home-2-slider-2",
+        "image": "product_images/home_2_slider-2.png",
+        "image_type": "s",
+        "product": 20
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 76,
+    "fields": {
+        "name": "home-2-slider-3",
+        "image": "product_images/home_2_slider-3.png",
+        "image_type": "s",
+        "product": 20
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 77,
+    "fields": {
+        "name": "home-3-card",
+        "image": "product_images/home_3_card.png",
+        "image_type": "c",
+        "product": 21
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 78,
+    "fields": {
+        "name": "home-3-slider-1",
+        "image": "product_images/home_3_slider-1.png",
+        "image_type": "s",
+        "product": 21
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 79,
+    "fields": {
+        "name": "home-3-slider-2",
+        "image": "product_images/home_3_slider-2.png",
+        "image_type": "s",
+        "product": 21
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 80,
+    "fields": {
+        "name": "home-3-slider-3",
+        "image": "product_images/home_3_slider-3.png",
+        "image_type": "s",
+        "product": 21
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 81,
+    "fields": {
+        "name": "home-4-card",
+        "image": "product_images/home_4_card.png",
+        "image_type": "c",
+        "product": 22
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 82,
+    "fields": {
+        "name": "home-4-slider-1",
+        "image": "product_images/home_4_slider-1.png",
+        "image_type": "s",
+        "product": 22
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 83,
+    "fields": {
+        "name": "home-4-slider-2",
+        "image": "product_images/home_4_slider-2.png",
+        "image_type": "s",
+        "product": 22
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 84,
+    "fields": {
+        "name": "home-5-card",
+        "image": "product_images/home_5_card.png",
+        "image_type": "c",
+        "product": 23
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 85,
+    "fields": {
+        "name": "home-5-slider-1",
+        "image": "product_images/home_5_slider-1.png",
+        "image_type": "s",
+        "product": 23
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 86,
+    "fields": {
+        "name": "home-5-slider-2",
+        "image": "product_images/home_5_slider-2.png",
+        "image_type": "s",
+        "product": 23
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 87,
+    "fields": {
+        "name": "home-5-slider-3",
+        "image": "product_images/home_5_slider-3.png",
+        "image_type": "s",
+        "product": 23
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 88,
+    "fields": {
+        "name": "home-6-card",
+        "image": "product_images/home_6_card.png",
+        "image_type": "c",
+        "product": 24
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 89,
+    "fields": {
+        "name": "home-6-slider-1",
+        "image": "product_images/home_6_slider-1.png",
+        "image_type": "s",
+        "product": 24
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 90,
+    "fields": {
+        "name": "home-6-slider-2",
+        "image": "product_images/home_6_slider-2.png",
+        "image_type": "s",
+        "product": 24
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 91,
+    "fields": {
+        "name": "home-6-slider-3",
+        "image": "product_images/home_6_slider-3.png",
+        "image_type": "s",
+        "product": 24
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 92,
+    "fields": {
+        "name": "home-7-card",
+        "image": "product_images/home_7_card.png",
+        "image_type": "c",
+        "product": 25
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 93,
+    "fields": {
+        "name": "home-7-slider-1",
+        "image": "product_images/home_7_slider-1.png",
+        "image_type": "s",
+        "product": 25
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 94,
+    "fields": {
+        "name": "home-7-slider-2",
+        "image": "product_images/home_7_slider-2.png",
+        "image_type": "s",
+        "product": 25
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 95,
+    "fields": {
+        "name": "home-8-card",
+        "image": "product_images/home_8_card.png",
+        "image_type": "c",
+        "product": 26
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 96,
+    "fields": {
+        "name": "home-8-slider-1",
+        "image": "product_images/home_8_slider-1.png",
+        "image_type": "s",
+        "product": 26
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 97,
+    "fields": {
+        "name": "home-8-slider-2",
+        "image": "product_images/home_8_slider-2.png",
+        "image_type": "s",
+        "product": 26
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 98,
+    "fields": {
+        "name": "home-8-slider-3",
+        "image": "product_images/home_8_slider-3.png",
+        "image_type": "s",
+        "product": 26
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 99,
+    "fields": {
+        "name": "home-9-card",
+        "image": "product_images/home_9_card.png",
+        "image_type": "c",
+        "product": 27
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 100,
+    "fields": {
+        "name": "home-9-slider-1",
+        "image": "product_images/home_9_slider-1.png",
+        "image_type": "s",
+        "product": 27
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 101,
+    "fields": {
+        "name": "home-9-slider-2",
+        "image": "product_images/home_9_slider-2.png",
+        "image_type": "s",
+        "product": 27
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 102,
+    "fields": {
+        "name": "home-9-slider-3",
+        "image": "product_images/home_9_slider-3.png",
+        "image_type": "s",
+        "product": 27
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 103,
+    "fields": {
+        "name": "modern-1-card",
+        "image": "product_images/modern_1_card.png",
+        "image_type": "c",
+        "product": 28
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 104,
+    "fields": {
+        "name": "modern-1-slider-1",
+        "image": "product_images/modern_1_slider-1.png",
+        "image_type": "s",
+        "product": 28
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 105,
+    "fields": {
+        "name": "modern-1-slider-2",
+        "image": "product_images/modern_1_slider-2.png",
+        "image_type": "s",
+        "product": 28
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 110,
+    "fields": {
+        "name": "modern-2-card",
+        "image": "product_images/modern_2_card.png",
+        "image_type": "c",
+        "product": 29
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 111,
+    "fields": {
+        "name": "modern-2-slider-1",
+        "image": "product_images/modern_2_slider-1.png",
+        "image_type": "s",
+        "product": 29
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 112,
+    "fields": {
+        "name": "modern-2-slider-2",
+        "image": "product_images/modern_2_slider-2.png",
+        "image_type": "s",
+        "product": 29
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 113,
+    "fields": {
+        "name": "modern-2-slider-3",
+        "image": "product_images/modern_2_slider-3.png",
+        "image_type": "s",
+        "product": 29
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 114,
+    "fields": {
+        "name": "modern-3-card",
+        "image": "product_images/modern_3_card.png",
+        "image_type": "c",
+        "product": 30
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 115,
+    "fields": {
+        "name": "modern-3-slider-1",
+        "image": "product_images/modern_3_slider-1.png",
+        "image_type": "s",
+        "product": 30
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 116,
+    "fields": {
+        "name": "modern-3-slider-2",
+        "image": "product_images/modern_3_slider-2.png",
+        "image_type": "s",
+        "product": 30
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 117,
+    "fields": {
+        "name": "modern-3-slider-3",
+        "image": "product_images/modern_3_slider-3.png",
+        "image_type": "s",
+        "product": 30
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 118,
+    "fields": {
+        "name": "modern-4-card",
+        "image": "product_images/modern_4_card.png",
+        "image_type": "c",
+        "product": 31
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 119,
+    "fields": {
+        "name": "modern-4-slider-1",
+        "image": "product_images/modern_4_slider-1.png",
+        "image_type": "s",
+        "product": 31
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 120,
+    "fields": {
+        "name": "modern-4-slider-2",
+        "image": "product_images/modern_4_slider-2.png",
+        "image_type": "s",
+        "product": 31
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 121,
+    "fields": {
+        "name": "modern-4-slider-3",
+        "image": "product_images/modern_4_slider-3.png",
+        "image_type": "s",
+        "product": 31
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 122,
+    "fields": {
+        "name": "modern-5-card",
+        "image": "product_images/modern_5_card.png",
+        "image_type": "c",
+        "product": 32
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 123,
+    "fields": {
+        "name": "modern-5-slider-1",
+        "image": "product_images/modern_5_slider-1.png",
+        "image_type": "s",
+        "product": 32
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 124,
+    "fields": {
+        "name": "modern-5-slider-2",
+        "image": "product_images/modern_5_slider-2.png",
+        "image_type": "s",
+        "product": 32
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 125,
+    "fields": {
+        "name": "modern-5-slider-3",
+        "image": "product_images/modern_5_slider-3.png",
+        "image_type": "s",
+        "product": 32
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 126,
+    "fields": {
+        "name": "modern-6-card",
+        "image": "product_images/modern_6_card.png",
+        "image_type": "c",
+        "product": 33
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 127,
+    "fields": {
+        "name": "modern-6-slider-1",
+        "image": "product_images/modern_6_slider-1.png",
+        "image_type": "s",
+        "product": 33
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 128,
+    "fields": {
+        "name": "modern-6-slider-2",
+        "image": "product_images/modern_6_slider-2.png",
+        "image_type": "s",
+        "product": 33
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 129,
+    "fields": {
+        "name": "modern-6-slider-3",
+        "image": "product_images/modern_6_slider-3.png",
+        "image_type": "s",
+        "product": 33
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 130,
+    "fields": {
+        "name": "modern-7-card",
+        "image": "product_images/modern_7_card.png",
+        "image_type": "c",
+        "product": 34
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 131,
+    "fields": {
+        "name": "modern-7-slider-1",
+        "image": "product_images/modern_7_slider-1.png",
+        "image_type": "s",
+        "product": 34
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 132,
+    "fields": {
+        "name": "modern-7-slider-2",
+        "image": "product_images/modern_7_slider-2.png",
+        "image_type": "s",
+        "product": 34
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 133,
+    "fields": {
+        "name": "modern-7-slider-3",
+        "image": "product_images/modern_7_slider-3.png",
+        "image_type": "s",
+        "product": 34
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 134,
+    "fields": {
+        "name": "modern-8-card",
+        "image": "product_images/modern_8_card.png",
+        "image_type": "c",
+        "product": 35
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 135,
+    "fields": {
+        "name": "modern-8-slider-1",
+        "image": "product_images/modern_8_slider-1.png",
+        "image_type": "s",
+        "product": 35
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 136,
+    "fields": {
+        "name": "modern-8-slider-2",
+        "image": "product_images/modern_8_slider-2.png",
+        "image_type": "s",
+        "product": 35
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 137,
+    "fields": {
+        "name": "modern-8-slider-3",
+        "image": "product_images/modern_8_slider-3.png",
+        "image_type": "s",
+        "product": 35
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 138,
+    "fields": {
+        "name": "modern-9-card",
+        "image": "product_images/modern_9_card.png",
+        "image_type": "c",
+        "product": 36
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 139,
+    "fields": {
+        "name": "modern-9-slider-1",
+        "image": "product_images/modern_9_slider-1.png",
+        "image_type": "s",
+        "product": 36
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 140,
+    "fields": {
+        "name": "modern-9-slider-2",
+        "image": "product_images/modern_9_slider-2.png",
+        "image_type": "s",
+        "product": 36
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 141,
+    "fields": {
+        "name": "modern-9-slider-3",
+        "image": "product_images/modern_9_slider-3.png",
+        "image_type": "s",
+        "product": 36
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 142,
+    "fields": {
+        "name": "office-1-card",
+        "image": "product_images/office_1_card.png",
+        "image_type": "c",
+        "product": 37
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 143,
+    "fields": {
+        "name": "office-1-slider-1",
+        "image": "product_images/office_1_slider-1.png",
+        "image_type": "s",
+        "product": 37
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 144,
+    "fields": {
+        "name": "office-1-slider-2",
+        "image": "product_images/office_1_slider-2.png",
+        "image_type": "s",
+        "product": 37
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 145,
+    "fields": {
+        "name": "office-1-slider-3",
+        "image": "product_images/office_1_slider-3.png",
+        "image_type": "s",
+        "product": 37
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 146,
+    "fields": {
+        "name": "office-2-card",
+        "image": "product_images/office_2_card.png",
+        "image_type": "c",
+        "product": 38
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 147,
+    "fields": {
+        "name": "office-2-slider-1",
+        "image": "product_images/office_2_slider-1.png",
+        "image_type": "s",
+        "product": 38
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 148,
+    "fields": {
+        "name": "office-2-slider-2",
+        "image": "product_images/office_2_slider-2.png",
+        "image_type": "s",
+        "product": 38
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 149,
+    "fields": {
+        "name": "office-2-slider-3",
+        "image": "product_images/office_2_slider-3.png",
+        "image_type": "s",
+        "product": 38
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 150,
+    "fields": {
+        "name": "office-3-card",
+        "image": "product_images/office_3_card.png",
+        "image_type": "c",
+        "product": 39
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 151,
+    "fields": {
+        "name": "office-3-slider-1",
+        "image": "product_images/office_3_slider-1.png",
+        "image_type": "s",
+        "product": 39
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 152,
+    "fields": {
+        "name": "office-3-slider-2",
+        "image": "product_images/office_3_slider-2.png",
+        "image_type": "s",
+        "product": 39
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 153,
+    "fields": {
+        "name": "office-3-slider-3",
+        "image": "product_images/office_3_slider-3.png",
+        "image_type": "s",
+        "product": 39
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 154,
+    "fields": {
+        "name": "office-4-card",
+        "image": "product_images/office_4_card.png",
+        "image_type": "c",
+        "product": 40
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 155,
+    "fields": {
+        "name": "office-4-slider-1",
+        "image": "product_images/office_4_slider-1.png",
+        "image_type": "s",
+        "product": 40
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 156,
+    "fields": {
+        "name": "office-4-slider-2",
+        "image": "product_images/office_4_slider-2.png",
+        "image_type": "s",
+        "product": 40
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 157,
+    "fields": {
+        "name": "office-4-slider-3",
+        "image": "product_images/office_4_slider-3.png",
+        "image_type": "s",
+        "product": 40
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 158,
+    "fields": {
+        "name": "office-5-card",
+        "image": "product_images/office_5_card.png",
+        "image_type": "c",
+        "product": 41
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 159,
+    "fields": {
+        "name": "office-5-slider-1",
+        "image": "product_images/office_5_slider-1.png",
+        "image_type": "s",
+        "product": 41
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 160,
+    "fields": {
+        "name": "office-5-slider-2",
+        "image": "product_images/office_5_slider-2.png",
+        "image_type": "s",
+        "product": 41
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 161,
+    "fields": {
+        "name": "office-5-slider-3",
+        "image": "product_images/office_5_slider-3.png",
+        "image_type": "s",
+        "product": 41
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 162,
+    "fields": {
+        "name": "office-6-card",
+        "image": "product_images/office_6_card.png",
+        "image_type": "c",
+        "product": 42
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 163,
+    "fields": {
+        "name": "office-6-slider-1",
+        "image": "product_images/office_6_slider-1.png",
+        "image_type": "s",
+        "product": 42
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 164,
+    "fields": {
+        "name": "office-6-slider-2",
+        "image": "product_images/office_6_slider-2.png",
+        "image_type": "s",
+        "product": 42
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 166,
+    "fields": {
+        "name": "office-6-slider-3",
+        "image": "product_images/office_6_slider-3.png",
+        "image_type": "s",
+        "product": 42
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 167,
+    "fields": {
+        "name": "office-7-card",
+        "image": "product_images/office_7_card.png",
+        "image_type": "c",
+        "product": 43
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 168,
+    "fields": {
+        "name": "office-7-slider-1",
+        "image": "product_images/office_7_slider-1.png",
+        "image_type": "s",
+        "product": 43
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 169,
+    "fields": {
+        "name": "office-7-slider-2",
+        "image": "product_images/office_7_slider-2.png",
+        "image_type": "s",
+        "product": 43
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 170,
+    "fields": {
+        "name": "office-7-slider-3",
+        "image": "product_images/office_7_slider-3.png",
+        "image_type": "s",
+        "product": 43
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 171,
+    "fields": {
+        "name": "office-8-card",
+        "image": "product_images/office_8_card.png",
+        "image_type": "c",
+        "product": 44
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 172,
+    "fields": {
+        "name": "office-8-slider-1",
+        "image": "product_images/office_8_slider-1.png",
+        "image_type": "s",
+        "product": 44
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 173,
+    "fields": {
+        "name": "office-8-slider-2",
+        "image": "product_images/office_8_slider-2.png",
+        "image_type": "s",
+        "product": 44
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 174,
+    "fields": {
+        "name": "office-9-card",
+        "image": "product_images/office_9_card.png",
+        "image_type": "c",
+        "product": 45
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 175,
+    "fields": {
+        "name": "office-9-slider-1",
+        "image": "product_images/office_9_slider-1.png",
+        "image_type": "s",
+        "product": 45
+    }
+},
+{
+    "model": "products.productimages",
+    "pk": 176,
+    "fields": {
+        "name": "office-9-slider-2",
+        "image": "product_images/office_9_slider-2.png",
+        "image_type": "s",
+        "product": 45
+    }
+},
+{
+    "model": "products.productfeatures",
+    "pk": 1,
+    "fields": {
+        "name": "Милан",
+        "product": 1,
+        "detailed_desc": "Прикроватная тумба Милан сделает обстановку спальни комфортнее. В выдвижном ящике и открытой нише удобно хранить личные вещи, которые часто нужны под рукой. Контрастные детали и фрезеровка на фасаде придают модели уникальные черты. Благодаря высоким ножкам под тумбой легко проезжает робот-пылесос.",
+        "color": "светлое дерево",
+        "dimensions": "(В × Ш × Г)  47 × 50 × 38 см"
+    }
+},
+{
+    "model": "products.productfeatures",
+    "pk": 2,
+    "fields": {
+        "name": "Холли",
+        "product": 2,
+        "detailed_desc": "Кровать с подъемным механизмом Холли — идеальный баланс эстетики и комфорта. Изюминка модели — высокое изголовье с небольшими боковинами, которые создают дополнительный уют. В такой кровати приятно засыпать и просыпаться, а также отдыхать, облокотившись на мягкую спинку. Благодаря высоким ножкам модель не выглядит слишком массивно, и к ней можно подойти вплотную, застилая постель или меняя белье.",
+        "color": "светло-бежевый",
+        "dimensions": "(В × Ш × Г) 106 × 140 × 215 см"
+    }
+},
+{
+    "model": "products.productfeatures",
+    "pk": 3,
+    "fields": {
+        "name": "Дюваль",
+        "product": 3,
+        "detailed_desc": "Прикроватная тумба Дюваль выполнена в уютном древесном оттенке и дополнена контрастным декором. Небольшая глубина позволяет сэкономить место в спальне, не отказываясь от комфорта. На крышке и открытой полке можно хранить вещи, которые часто нужны под рукой, а в ящике — спрятать содержимое от пыли и посторонних глаз.",
+        "color": "светлое дерево",
+        "dimensions": "(В × Ш × Г) 41 × 43 × 30 см"
+    }
+},
+{
+    "model": "products.productfeatures",
+    "pk": 4,
+    "fields": {
+        "name": "Томсон",
+        "product": 4,
+        "detailed_desc": "Элегантная кровать с подъемным механизмом Томсон — настоящее украшение современного интерьера. Строгие линии каркаса подчеркивает лаконичная отделка строчкой, которой декорировано изголовье. На такой кровати приятно наслаждаться отдыхом, устроившись с любимой книгой или за просмотром сериала. Благодаря мягкой обивке модель смотрится по-настоящему уютно.",
+        "color": "Коричневый",
+        "dimensions": "(В × Ш × Г) 81 × 148 × 209 см"
+    }
+},
+{
+    "model": "products.productfeatures",
+    "pk": 5,
+    "fields": {
+        "name": "Барди",
+        "product": 5,
+        "detailed_desc": "Кровать Барди Массив Сосны станет гармоничным дополнением спальни в любом интерьерном стиле: от классики до сканди. Простая конструкция без декоративных элементов выполнена из массива. Модель привлекает экологичностью, долговечностью и уютной фактурой натурального дерева.",
+        "color": "Темный орех",
+        "dimensions": "(В × Ш × Г) 90 × 96 × 209 см"
+    }
+},
+{
+    "model": "products.productfeatures",
+    "pk": 6,
+    "fields": {
+        "name": "Прага",
+        "product": 6,
+        "detailed_desc": "Двуспальная кровать Прага привлекает внимание строгими линиями и контрастным сочетанием оттенков. За счет выраженной древесной текстуры мебель смотрится особенно колоритно. Вместительный короб для белья позволяет эффективно задействовать пустующее пространство под кроватью, создавая дополнительное место для хранения вещей.",
+        "color": "Светлое дерево",
+        "dimensions": "(В × Ш × Г) 99.6 × 169.4 × 213.2 см"
+    }
+},
+{
+    "model": "products.productfeatures",
+    "pk": 7,
+    "fields": {
+        "name": "Status Ultra",
+        "product": 7,
+        "detailed_desc": "Пружинный матрас Status Ultra S 24 — это презентабельный внешний вид, идеально подобранная структура и долговечность. 9-зональный блок независимых пружин Pocket Spring 620 обеспечивает оптимальную поддержку каждой части тела, сохраняя правильное положение позвоночника. Высокий слой наполнителя High Hard Foam смягчает поверхность и усиливает анатомические свойства матраса. Нижний слой пены Soft Foam вместе с пружинным блоком создает прочную основу матраса.",
+        "color": "Синий",
+        "dimensions": "(В × Ш × Д) 24 × 160 × 200 см"
+    }
+},
+{
+    "model": "products.productfeatures",
+    "pk": 8,
+    "fields": {
+        "name": "Джанго",
+        "product": 8,
+        "detailed_desc": "Подушка Джанго, созданная специально для качественного здорового сна, позволит комфортно отдыхать в любом положении. Вязкоэластичная пена Memory Foam с антибактериальной пропиткой Milliken приятно обволакивает и бережно поддерживает голову и шейный отдел в правильном положении, снимая напряжение с мышц и улучшая кровообращение, что позволяет лучше высыпаться. Гипоаллергенный наполнитель сертифицирован европейскими стандартами качества CertiPUR. Съемный чехол оснащен специальной 3D-сеткой для улучшения циркуляции воздуха и создания комфортного микроклимата во время сна. Высокое качество ткани чехла гарантирует мягкость и отсутствие катышков на поверхности в течение всего периода эксплуатации.",
+        "color": "Белый",
+        "dimensions": "(В × Ш × Г) 10 × 60 × 40 см"
+    }
+},
+{
+    "model": "products.productfeatures",
+    "pk": 9,
+    "fields": {
+        "name": "Форест",
+        "product": 9,
+        "detailed_desc": "Комплект постельного белья Форест создаст атмосферу безмятежности и умиротворения. Хлопок свободно пропускает воздух и отводит влагу, заботясь о комфорте на протяжении всей ночи. Лаконичный дизайн подходит для любого интерьера, помогает расслабиться и полноценно восстановить силы.",
+        "color": "Светло-зеленый",
+        "dimensions": "Размер пододеяльника 175х210 см; Размер простыни 220х240 см"
+    }
+},
+{
+    "model": "products.productfeatures",
+    "pk": 10,
+    "fields": {
+        "name": "Фернандес",
+        "product": 10,
+        "detailed_desc": "Угловой диван Фернандес станет отличным дополнением современного интерьера. Глубокое посадочное место, оптимальный угол наклона спинки и два типа наполнителя в объемных подушках — детали, которые делают модель по-настоящему комфортной. Диван легко трансформируется для сна и складывается обратно, не повреждая напольное покрытие. В разложенном виде образуется полноценное спальное место, а для постельных принадлежностей предусмотрены два вместительных ящика: в оттоманке и основной секции.\r\nБлагодаря высоким ножкам не возникает проблем с уборкой: под диваном без труда проедет робот-пылесос. Съемные чехлы позволяют содержать модель в чистоте и при необходимости менять его дизайн.",
+        "color": "Сливовый",
+        "dimensions": "(В × Ш × Г) 95 × 233 × 159 см"
+    }
+},
+{
+    "model": "products.productfeatures",
+    "pk": 11,
+    "fields": {
+        "name": "Юнит",
+        "product": 11,
+        "detailed_desc": "Журнальный столик Юнит станет украшением интерьера гостиной, кухни или спальни. Классическая круглая форма легко адаптируется под разные стили меблировки. Модель может послужить альтернативой кухонному столу либо выступить в роли рабочей поверхности для компьютера. Полка подходит для хранения различных мелочей. Ножки выполнены из массива дерева, что гарантирует долговечность конструкции.",
+        "color": "Белый / Бук",
+        "dimensions": "(В × Ш × Г) 51 × 65 × 65 см"
+    }
+},
+{
+    "model": "products.productfeatures",
+    "pk": 12,
+    "fields": {
+        "name": "Total Black",
+        "product": 12,
+        "detailed_desc": "Журнальный столик Total Black — компактная и стильная модель для дома и офиса. Стеклянная столешница с полированной кромкой изящно смотрится в интерьере. Изогнутая металлическая опора создает необычный акцент меблировки. Основание словно отзеркаливает столешницу из стекла. В необычном сочетании текстур кроется задумка дизайна.",
+        "color": "Черный",
+        "dimensions": "(В × Ш × Г) 47 × 60 × 60 см"
+    }
+},
+{
+    "model": "products.productfeatures",
+    "pk": 13,
+    "fields": {
+        "name": "Orange",
+        "product": 13,
+        "detailed_desc": "Мягкое комфортабельное кресло Orange станет украшением спальни или гостиной. Модель идеально подходит для отдыха перед камином или чтения любимой книги. Высокая спинка с поясничной подушкой позволит расположиться с максимальным удобством. Объемная стежка и декоративный кант подчеркивают элегантный силуэт кресла. Бархатистая обивка устойчива к износу и легко очищается от пыли и пятен.",
+        "color": "Оранжевый",
+        "dimensions": "(В × Ш × Г) 111 × 76 × 84 см"
+    }
+},
+{
+    "model": "products.productfeatures",
+    "pk": 14,
+    "fields": {
+        "name": "Пиквик",
+        "product": 14,
+        "detailed_desc": "Кресло-качалка Пиквик — идеальное сочетание эргономичных форм, надежного исполнения и стильного дизайна. Модель с объемными мягкими элементами подарит непревзойденный комфорт, позволит максимально расслабиться и насладиться отдыхом либо любимым занятием.",
+        "color": "Коричневый",
+        "dimensions": "(В × Ш × Г) 100 × 68.5 × 80 см"
+    }
+},
+{
+    "model": "products.productfeatures",
+    "pk": 15,
+    "fields": {
+        "name": "Bookstore",
+        "product": 15,
+        "detailed_desc": "Стеллаж Bookstore гармонично дополнит домашний интерьер и предоставит дополнительное место для книг и сувениров, экономя свободное пространство комнаты. Открытые отделения обеспечат быстрый доступ к домашней библиотеке.",
+        "color": "Белый",
+        "dimensions": "(В × Ш × Г) 52 × 78 × 19.6 см"
+    }
+},
+{
+    "model": "products.productfeatures",
+    "pk": 16,
+    "fields": {
+        "name": "Мерлен",
+        "product": 16,
+        "detailed_desc": "Стеллаж Мерлен с ящиками — универсальная модель для квартиры или офиса. Лаконичный дизайн в сочетании с удобной системой хранения делает стеллаж актуальным решением для любого интерьера.",
+        "color": "Белый / Бук",
+        "dimensions": "(В × Ш × Г) 34 × 148 × 37 см"
+    }
+},
+{
+    "model": "products.productfeatures",
+    "pk": 17,
+    "fields": {
+        "name": "White Box",
+        "product": 17,
+        "detailed_desc": "Комод White Box предоставит достаточно места для хранения одежды, белья и аксессуаров. Комбинированное наполнение с распашными дверцами и выдвижными ящиками поможет удобно распределить всё необходимое. Современный дизайн с высокими ножками и скошенными фасадами гармонично смотрится в разных интерьерах.",
+        "color": "Белый",
+        "dimensions": "(В × Ш × Г) 83 × 90 × 42 см"
+    }
+},
+{
+    "model": "products.productfeatures",
+    "pk": 18,
+    "fields": {
+        "name": "Black Box",
+        "product": 18,
+        "detailed_desc": "Комод Black Box предоставляет большое количество мест для хранения разных категорий вещей. Элегантный оттенок придает интерьеру индивидуальный стиль. Выдвижные ящики подходят для постельного белья и аксессуаров. Модель легко интегрируется в любую обстановку.",
+        "color": "Черный",
+        "dimensions": "(В × Ш × Г) 75 × 138 × 39 см"
+    }
+},
+{
+    "model": "products.productfeatures",
+    "pk": 19,
+    "fields": {
+        "name": "",
+        "product": 19,
+        "detailed_desc": "Кресло Рио привнесет в интерьер особые элегантность и изящество. Глубокое сиденье создает условия для комфортного и расслабленного отдыха.  Элегантная обивка  придает образу дополнительное очарование и визуальную легкость. Изюминка кресла — износостойкая ткань, которая долго сохраняет первоначальный цвет.",
+        "color": "Латте",
+        "dimensions": "Габариты (В × Ш × Г) 100 × 85 × 88 см"
+    }
+},
+{
+    "model": "products.productfeatures",
+    "pk": 20,
+    "fields": {
+        "name": "",
+        "product": 20,
+        "detailed_desc": "Декоративная подушка станет удобным дополнением дивана или кресла, а также поможет расставить акценты в интерьере. Бархатистая ткань с легким блеском приятна на ощупь, устойчива к износу и не требует особого ухода. Благодаря однотонному дизайну модель легко комбинировать с другим текстилем, создавая новые цветовые сочетания. Потайная молния не портит внешний вид и позволяет при необходимости снять чехол для чистки или замены.",
+        "color": "Брусничный",
+        "dimensions": "(ДхШ): 50 х 50 см"
+    }
+},
+{
+    "model": "products.productfeatures",
+    "pk": 21,
+    "fields": {
+        "name": "",
+        "product": 22,
+        "detailed_desc": "Декоративная подушка BROWNY станет практичным дополнением к интерьеру спальни или гостиной. Модель можно подложить под голову или ноги, чтобы с максимальным комфортом отдохнуть после напряженного дня. Съемный чехол позволит без труда держать подушку в чистоте. Она выполнена из износостойкой ткани и надолго сохранит форму и привлекательный внешний вид.",
+        "color": "Бордо",
+        "dimensions": "(Д × Ш ) 45 × 45 см"
+    }
+},
+{
+    "model": "products.productfeatures",
+    "pk": 22,
+    "fields": {
+        "name": "",
+        "product": 21,
+        "detailed_desc": "Напольное зеркало MIRROR позволит с легкостью оценить образ в полный рост. Модель обладает простыми лаконичными формами, поэтому будет смотреться в любом интерьере.",
+        "color": "Черный",
+        "dimensions": "Габариты (В × Ш × Г) 138 × 35 × 3.4 см"
+    }
+},
+{
+    "model": "products.productfeatures",
+    "pk": 23,
+    "fields": {
+        "name": "",
+        "product": 23,
+        "detailed_desc": "Настенное зеркало Looking Glass станет органичным дополнением любого интерьера. Зеркальное полотно позволит оценить подобранный образ, а также сделает помещение визуально просторнее.",
+        "color": "Темно-коричневый",
+        "dimensions": "Габариты (В × Ш × Г) 104.3 × 60 × 2 см"
+    }
+},
+{
+    "model": "products.productfeatures",
+    "pk": 24,
+    "fields": {
+        "name": "",
+        "product": 24,
+        "detailed_desc": "Прихожая Бодрум станет прекрасным дополнением интерьера: она визуально расширит пространство и позволит оценить внешний вид перед выходом из дома. Лаконичное зеркальное полотно без рамы не перетягивает внимание и позволяет хорошо рассмотреть свое отражение.",
+        "color": "Дуб Крафт золотой",
+        "dimensions": "Габариты (В × Ш × Г) 175 × 60 × 30.4 см"
+    }
+},
+{
+    "model": "products.productfeatures",
+    "pk": 25,
+    "fields": {
+        "name": "",
+        "product": 25,
+        "detailed_desc": "Настенное зеркало White Rabbit станет незаменимым элементом прихожей и позволит оценить подобранный образ перед выходом из дома.",
+        "color": "без рамы",
+        "dimensions": "Габариты (В × Ш × Г) 59 × 82 × 0.7 см"
+    }
+},
+{
+    "model": "products.productfeatures",
+    "pk": 26,
+    "fields": {
+        "name": "",
+        "product": 26,
+        "detailed_desc": "Кресло-качалка Lounge — идеальное сочетание эргономичных форм, надежного исполнения и стильного дизайна. Модель с объемными мягкими элементами подарит непревзойденный комфорт, позволит максимально расслабиться и насладиться отдыхом либо любимым занятием.",
+        "color": "Бежевый",
+        "dimensions": "Габариты (В × Ш × Г) 100 × 68.5 × 80 см"
+    }
+},
+{
+    "model": "products.productfeatures",
+    "pk": 27,
+    "fields": {
+        "name": "",
+        "product": 27,
+        "detailed_desc": "Барный стул Red Devil идеально подойдёт для меблировки ресторанов и клубов, а также для оформления уютного домашнего бара. Небольшие габариты и продуманная конструкция позволяют достичь максимальной комфортабельности заняв при этом минимум пространства. Каркас изделия произведен из прочной стали и имеет хромовое покрытие. Такое решение обеспечивает не только повышение износостойкости конструкции, но и роскошный внешний вид.",
+        "color": "Красный",
+        "dimensions": "Габариты (В × Ш × Г) 90/112 × 47 × 54 см"
+    }
+},
+{
+    "model": "products.productfeatures",
+    "pk": 28,
+    "fields": {
+        "name": "",
+        "product": 37,
+        "detailed_desc": "Игровое кресло Джозеф разработано специально для тех, кто много времени проводит за компьютером. Глубокое сиденье и удобная форма спинки обеспечивают комфортную посадку на протяжении долгих часов за работой или игрой. Регулируемые 2D-подлокотники позволяют настроить высоту под индивидуальные предпочтения.",
+        "color": "Черный",
+        "dimensions": "Габариты (В × Ш × Г) 118/128 × 70 × 63 см"
+    }
+},
+{
+    "model": "products.productfeatures",
+    "pk": 29,
+    "fields": {
+        "name": "",
+        "product": 39,
+        "detailed_desc": "Офисное кресло Green Day регулируется по высоте, поэтому подходит для людей разного роста. Плавный изгиб спинки и скошенный край сиденья обеспечивают комфортную посадку. В конструкции нет подлокотников, а значит, после работы стул можно задвинуть под стол, освободив пространство. Еще одно преимущество модели — универсальный дизайн: кресло отлично смотрится в самых разных интерьерах.",
+        "color": "Бирюзовый",
+        "dimensions": "Габариты (В × Ш × Г) 87/101 × 43 × 43 см"
+    }
+},
+{
+    "model": "products.productfeatures",
+    "pk": 30,
+    "fields": {
+        "name": "",
+        "product": 38,
+        "detailed_desc": "Небольшой письменный стол Ливерпуль удачно дополнит интерьер современной спальни или гостиной. На просторной столешнице разместятся и ноутбук, и необходимые в работе материалы. Модель дополнена тумбой с пятью ящиками разного размера на шариковых направляющих полного выдвижения. Продуманные зазоры между ящиками позволяют отказаться от привычных ручек — чтобы открыть ящик достаточно потянуть за фасад.",
+        "color": "Белый",
+        "dimensions": "Габариты (В × Ш × Г) 76.9 × 105 × 44.6 см"
+    }
+},
+{
+    "model": "products.productfeatures",
+    "pk": 31,
+    "fields": {
+        "name": "",
+        "product": 41,
+        "detailed_desc": "Письменный стол Дэвид поможет создать компактное рабочее или учебное пространство в небольшой комнате. Выдвижные ящики и открытые ниши позволяют хранить в быстром доступе документы и канцелярские принадлежности. Надстройка над столешницей не загромождает место и подходит для учебников, игрушек или предметов декора.",
+        "color": "Белый",
+        "dimensions": "Габариты (В × Ш × Г) 147.6 × 100.2 × 50.2 см"
+    }
+},
+{
+    "model": "products.productfeatures",
+    "pk": 32,
+    "fields": {
+        "name": "",
+        "product": 40,
+        "detailed_desc": "На компьютерном столе Аскет достаточно места для любой оргтехники или установки сразу двух мониторов. Металлические опоры обеспечивают прочность конструкции, а поверхность с анатомическим вырезом позволяет расположиться так, чтобы локти всегда оставались на столе. С обеих сторон предусмотрены отверстия с заглушками для вывода проводов.",
+        "color": "Белый / Черный",
+        "dimensions": "Габариты (В × Ш × Г) 74 × 135 × 73 см"
+    }
+},
+{
+    "model": "products.productfeatures",
+    "pk": 33,
+    "fields": {
+        "name": "",
+        "product": 42,
+        "detailed_desc": "Офисный стул Прадо — универсальная модель для меблировки современной квартиры или рабочего пространства. Мягкие сиденье и спинка позаботятся о комфорте, а прочный каркас обеспечит устойчивость. Износостойкая обивка легко чистится от загрязнений, поэтому стул можно использовать для оформления обеденной зоны или детской.",
+        "color": "Бордо",
+        "dimensions": "Габариты (В × Ш × Г) 85 × 48.5 × 52 см"
+    }
+},
+{
+    "model": "products.productfeatures",
+    "pk": 34,
+    "fields": {
+        "name": "",
+        "product": 43,
+        "detailed_desc": "Компьютерный стол Хилтон создаст комфортное пространство для работы или учебы. Увеличенная ширина столешницы позволяет удобно разместить ноутбук, офисную технику и папки с документами. Для разных мелочей есть пара выдвижных ящиков, а при необходимости стол можно дополнить выдвижной тумбой.",
+        "color": "Белый",
+        "dimensions": "Габариты (В × Ш × Г) 77 × 141.2 × 50 см"
+    }
+},
+{
+    "model": "products.productfeatures",
+    "pk": 35,
+    "fields": {
+        "name": "",
+        "product": 44,
+        "detailed_desc": "Письменный стол Форсаж — отличное решение для меблировки домашнего кабинета. Угловая конструкция позволит оптимально использовать пространство и создаст удобное место для работы или учебы. Такая конфигурация обеспечивает быстрый доступ ко всем необходимым материалам и технике. Выдвижные ящики и открытые ниши подойдут для хранения письменных принадлежностей, документов и гаджетов.",
+        "color": "Графит серый",
+        "dimensions": "Габариты (В × Ш × Г) 75 × 109 × 83 см"
+    }
+},
+{
+    "model": "products.productfeatures",
+    "pk": 36,
+    "fields": {
+        "name": "",
+        "product": 45,
+        "detailed_desc": "Письменный стол Junior — незаменимый элемент мебели для школьников, студентов, фрилансеров и офисных работников. Лаконичный дизайн легко интегрировать в современный интерьер. Тумба с выдвижными ящиками позволяет хранить под рукой всё необходимое для работы и учебы. Просторная столешница подходит для ноутбука, различных гаджетов и учебников.",
+        "color": "Дуб Крафт золотой / Белый глянец",
+        "dimensions": "Габариты (В × Ш × Г) 74.5 × 135.2 × 67 см"
+    }
+},
+{
+    "model": "products.productfeatures",
+    "pk": 37,
+    "fields": {
+        "name": "",
+        "product": 28,
+        "detailed_desc": "Угловой диван Антонио станет неотъемлемой частью комфортабельного интерьера. В сложенном виде на нём можно отдыхать сидя или полулежа, а в разложенном — использовать для сна. Надежный механизм трансформации рассчитан на ежедневные нагрузки, поэтому диван может стать удобной альтернативой кровати.",
+        "color": "Темно-коричневый",
+        "dimensions": "Габариты (В × Ш × Г) 90 × 205 × 140 см"
+    }
+},
+{
+    "model": "products.productfeatures",
+    "pk": 38,
+    "fields": {
+        "name": "",
+        "product": 29,
+        "detailed_desc": "Прямой диван Атланта с легкостью впишется в любой современный интерьер, будь то детская или кухня. Объемные подушки делают отдых удобнее, при этом их легко почистить благодаря съемным чехлам. Компактная кушетка без труда превращается в комфортную односпальную кровать, а бельевой короб вмещает постельные принадлежности или другие необходимые вещи.",
+        "color": "Оранжевый",
+        "dimensions": "Габариты (В × Ш × Г) 71 × 147 × 76 см"
+    }
+},
+{
+    "model": "products.productfeatures",
+    "pk": 39,
+    "fields": {
+        "name": "",
+        "product": 30,
+        "detailed_desc": "Кухонный стол Бостон станет эффектным и практичным элементом современного интерьера. Механизм трансформации поможет при необходимости легко организовать дополнительные посадочные места. Прочное массивное основание обеспечит надежность и высокую устойчивость модели.",
+        "color": "Коричневый/Белый",
+        "dimensions": "Габариты (В × Ш × Г) 77 × 150.4/201.4 × 85 см"
+    }
+},
+{
+    "model": "products.productfeatures",
+    "pk": 40,
+    "fields": {
+        "name": "",
+        "product": 31,
+        "detailed_desc": "Кресло White Snow — уютный островок комфорта и стильный акцент интерьера. Обнимающая форма спинки и широкое сиденье позволяют удобно расположиться на время отдыха. В дизайне воплощен тренд на плавные и округлые линии, которые создают гармоничное пространство и подчеркивают актуальную эстетику мебели.",
+        "color": "Белый",
+        "dimensions": "Габариты (В × Ш × Г) 66 × 74 × 78 см"
+    }
+},
+{
+    "model": "products.productfeatures",
+    "pk": 41,
+    "fields": {
+        "name": "",
+        "product": 32,
+        "detailed_desc": "Журнальный столик-трансформер ФИШЕР — идеальное решение для малогабаритной квартиры. Модель с легкостью выполнит роль журнального столика, за которым можно выпить чай и почитать газету на диване, а также послужит полноценным обеденным столом.",
+        "color": "Хром / Венге светлый",
+        "dimensions": "Габариты (В × Ш × Г) 50/74 × 86/172 × 72 см"
+    }
+},
+{
+    "model": "products.productfeatures",
+    "pk": 42,
+    "fields": {
+        "name": "",
+        "product": 33,
+        "detailed_desc": "Табурет Эклер — практичный вариант для меблировки обеденной зоны в малогабаритном помещении. Модель легко перемещать и задвигать под стол для экономии пространства. Специальные заглушки на ножках позволяют обезопасить напольное покрытие.",
+        "color": "Белый",
+        "dimensions": "Габариты (В × Ш × Г) 45 × 29 × 29 см"
+    }
+},
+{
+    "model": "products.productfeatures",
+    "pk": 43,
+    "fields": {
+        "name": "",
+        "product": 34,
+        "detailed_desc": "Уютное кресло Мэрион — отличный вариант для небольшой комнаты. Дизайн модели вдохновлен современным взглядом на традиционные черты вольтеровского стиля, благодаря чему она станет оригинальным дополнением интерьера. Кресло выгодно подчеркнет любую обстановку, станет очаровательной изюминкой и подарит потрясающий комфорт.",
+        "color": "Коричневый",
+        "dimensions": "Габариты (В × Ш × Г) 105 × 73 × 85 см"
+    }
+},
+{
+    "model": "products.productfeatures",
+    "pk": 44,
+    "fields": {
+        "name": "",
+        "product": 35,
+        "detailed_desc": "Кресло Арни органично сочетает эстетику и практичность. Плавные линии, глубокая удобная посадка, фактурная ткань и высокие ножки создают неповторимый облик модели и подчеркивают оригинальность интерьера. Благодаря скругленным подлокотникам и мягкой приспинной подушке в кресле очень уютно и комфортно отдыхать.",
+        "color": "Молочный",
+        "dimensions": "Габариты (В × Ш × Г) 90 × 92 × 98 см"
+    }
+},
+{
+    "model": "products.productfeatures",
+    "pk": 45,
+    "fields": {
+        "name": "",
+        "product": 36,
+        "detailed_desc": "Стеллаж Full House позволит оформить пространство комнаты, создав уютный уголок для хранения домашней библиотеки. Высокую конструкцию с открытыми полками можно использовать как ширму, дополнив её домашними растениями и предметами декора. Модель легко адаптировать для гостиной, кабинета или домашнего офиса.",
+        "color": "Беленый дуб",
+        "dimensions": "Габариты (В × Ш × Г) 146 × 76 × 38 см"
+    }
+}
+]
