@@ -34,11 +34,16 @@
 
 ## 💻 Как запустить локально
 1. Клонировать репозиторий: `git clone https://github.com/Archibald-prog/eshop.git` 
-2. Создать виртуальное окружение: `python -m venv venv`
-3. Установить зависимости: `pip install -r requirements.txt`
-4. Создать базу данных в своей локальной PostgreSQL (через клиент pgAdmin или терминал) 
-5. Создать файл `.env` на основе `.env.example` (скопируйте шаблон настроек командой `cp .env.example .env`) 
-6. В файле `.env` указать свои локальные значения переменных - включая параметры БД в переменной `DATABASE_URL`
-7. Применить миграции: `python manage.py migrate`
-8. Заполнить базу тестовыми данными: `python manage.py loaddata fixtures/init_db.json`
-9. Запустить сервер: `python manage.py runserver`
+2. Создать виртуальное окружение: `python -m venv venv` 
+    (для пользователей Mac OS - создать ВО с конкретной версией языка: `python3.12 -m venv venv`) 
+3. Активировать ВО: `source venv/bin/activate` 
+4. Установить зависимости: `pip install -r requirements.txt`
+5. Создать базу данных и пользователя БД в своей локальной PostgreSQL (через клиент pgAdmin или терминал) 
+6. Создать файл `.env` на основе `.env.example` (скопируйте шаблон настроек командой `cp .env.example .env`) 
+7. Сгенерировать SECRET_KEY, отдав в терминале команду: 
+    `python -c 'from django.core.management.utils import get_random_secret_key; print(get_random_secret_key())'` 
+8. В файле `.env` указать свои локальные значения переменных - включая SECRET_KEY и параметры БД в переменной `DATABASE_URL`
+9. Создать в корне проекта каталог `media` (отдать команду `mkdir media`)
+10. Применить миграции: `python manage.py migrate`
+11. Заполнить базу тестовыми данными: `python manage.py loaddata fixtures/init_db.json`
+12. Запустить сервер: `python manage.py runserver`
