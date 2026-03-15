@@ -49,13 +49,24 @@ class BasketEdit(CartMixin, View):
     def post(self, request):
         basket_id = request.POST.get("cart_id")
         basket_item = Basket.objects.get(pk=int(basket_id))
-        item_quantity = int(request.POST.get("quantity"))
 
-        if item_quantity > 0:
-            basket_item.quantity = item_quantity
+        fields = {
+            "quantity": int(request.POST.get("quantity")),
+        }
+
+        updated = False
+        for field, value in fields.items():
+            if value is not None:
+                setattr(basket_item, field, value)
+                updated = True
+
+        if updated:
             basket_item.save()
-        else:
-            basket_item.delete()
+
+        return JsonResponse(self._get_basket_response(request))
+
+    def _get_basket_response(self, request):
+        """Helper method for generating a JSON response from the cart"""
 
         total_quantity = Basket.objects.filter(
             user=request.user if request.user.is_authenticated else None,
@@ -63,10 +74,8 @@ class BasketEdit(CartMixin, View):
             if not request.user.is_authenticated else None
         ).total_quantity()
 
-        response_data = {
+        return {
             "message": "Количество товара изменено",
-            "quantity": item_quantity,
             "total_quantity": total_quantity,
             "cart_items_html": self.render_basket(request),
         }
-        return JsonResponse(response_data)
